@@ -169,4 +169,62 @@ public class Student
 
 }
 ------------------------------------------------------------------------------
+wap to enter bank details and display it.
+accno,name,balance,withdraw,deposite and display the available balance
+--------------------------------------------------------------------------------------
+
+example-5
+-------------------
+package com.sandip;
+import java.util.*;
+public class Bank
+{
+int accno;
+String name;
+float bal;
+void input()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter accno,name,Balance");
+	accno=ob.nextInt();
+	name=ob.next();
+	bal=ob.nextFloat();
+}
+float withdraw()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter the withdraw amount");
+	float wd=ob.nextFloat();
+	if((bal+1000.00) > wd)
+		bal=bal-wd;
+	else
+		System.out.println("Balance is low");
+	return bal;
+}
+float deposite()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter the deposite amount");
+	float dip=ob.nextFloat();
+	bal=bal+dip;
+	return bal;
+}
+public static void main(String[] args) {
+	Bank ob=new Bank();
+	ob.input();
+	Scanner ob1=new Scanner(System.in);
+	System.out.println("enter 1 for deposite 2 for withdraw");
+	int choice=ob1.nextInt();
+	if(choice==1)
+		System.out.println("the total balance is "+ob.deposite());
+	else
+		System.out.println("the total balance is "+ob.withdraw());
+}
+}
+----------------------------------------------------------------
+
+
+
+
+
 
