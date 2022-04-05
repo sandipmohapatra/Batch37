@@ -90,7 +90,36 @@ public static void main(String[] args)
 --------------------------------------------------------------------
 wap to enter 5 nos and find the sum and average.
 -------------------------------------------------------------------------
-
-
+wap to create a class employee .enter employee no,name,address and display it.
+----------------------------------------------------------------------------------
+example-3
+-------------------------
+package com.sandip;
+import java.util.*;
+public class Employee 
+{
+int empno;
+String name,address;
+void input()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter empno,name,address");
+	empno=ob.nextInt();
+	name=ob.next();
+	address=ob.next();
+}
+void display()
+{
+	System.out.println("the empno is "+empno);
+	System.out.println("the name is "+name);
+	System.out.println("the address is "+address);
+	}
+public static void main(String[] args) {
+	Employee ob1=new Employee();
+	ob1.input();
+	ob1.display();
+}
+}
+------------------------------------------------------------------------------
 
 
