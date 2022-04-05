@@ -1,0 +1,13 @@
+1)Java is a object Oriented programing language.
+2)It is simpler than c and c++ as we don't have pointer concept,multiple inheritance,operator overloading.
+3)Java support multi-threading or multi-tasking.
+4)we can develop webapplication,network application,standalone application, and mobile application.
+5)In java we have constructor but no destructor .There is automatic garbage clearance.
+6)In java we have interface which support multiple inheritance.
+7)we have 4 access specifier in java which makes java more secure language.
+-------------------------------------------------
+i)private :- if we declare variables and methods as private we can access it with in the class only.
+ii)public:- if we declare variables and methods as public we can access it with in the class only.
+iii)protected
+iv)default
+
