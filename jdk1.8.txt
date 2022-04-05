@@ -121,5 +121,52 @@ public static void main(String[] args) {
 }
 }
 ------------------------------------------------------------------------------
+example-4
+----------------
+package com.sandip;
+import java.util.*;
+public class Student 
+{
+	int rollno;
+	String name,address;
+	float phy,chem,bio,maths,total,avg,grade;
+	void input()
+	{
+		Scanner ob=new Scanner(System.in);
+		System.out.println("enter rollno,name,address,phy,chem,bio,maths marks");
+		rollno=ob.nextInt();
+		name=ob.next();
+		address=ob.next();
+		phy=ob.nextFloat();
+		chem=ob.nextFloat();
+		bio=ob.nextFloat();
+		maths=ob.nextFloat();
+		total=phy+chem+bio+maths;
+		avg=total/4;
+			}
+	void display()
+	{
+		System.out.println("the rollno is"+rollno+"The name is"+name);
+		System.out.println("the address is"+address);
+		System.out.println("the phy marks is"+phy+"the chem marks is"+chem);
+		System.out.println("the bio marks is"+bio+"The maths marks is"+maths);
+		System.out.println("the total is"+total);
+		System.out.println("the average is"+avg);
+		if(avg>=70)
+			System.out.println("first division");
+		else if(avg>=60)
+			System.out.println("Second division");
+		else if(avg>=50)
+			System.out.println("Third division");
+		else
+			System.out.println("fail");
+	}
+	public static void main(String[] args) {
+		Student ob=new Student();
+		ob.input();
+		ob.display();
+	}
 
+}
+------------------------------------------------------------------------------
 
