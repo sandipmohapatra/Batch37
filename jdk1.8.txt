@@ -195,7 +195,7 @@ float withdraw()
 	Scanner ob=new Scanner(System.in);
 	System.out.println("enter the withdraw amount");
 	float wd=ob.nextFloat();
-	if((bal+1000.00) > wd)
+	if(bal >= wd+1000.00)
 		bal=bal-wd;
 	else
 		System.out.println("Balance is low");
@@ -221,6 +221,7 @@ public static void main(String[] args) {
 		System.out.println("the total balance is "+ob.withdraw());
 }
 }
+
 ----------------------------------------------------------------
 
 
