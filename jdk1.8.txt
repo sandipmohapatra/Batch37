@@ -232,6 +232,8 @@ There are 2 types of constructor.
 1)default constructor :- It is without any parameter.
 2)parameterized constructor:- It is with parameter.
 -------------------------------------------
+example-6
+--------------------
 package com.sandip;
 
 public class ConstructorDemo 
@@ -267,6 +269,8 @@ public static void main(String[] args)
 Difference between function and constructor is function can have any name other than the class name.
 It returns a value.If we use more than one function with same name but with different data types the parameters and return type it is known as function overloading.
 ---------------------------------------------------------------------------------------------------
+example-7
+-------------------
 package com.sandip;
 
 public class ConstructorDemo 
@@ -316,6 +320,8 @@ public static void main(String[] args)
 ------------------------------------------------------------------------------- 
 function overloading
 -----------------------------------------
+example-8
+-----------------
 package com.sandip;
 
 public class ConstructorDemo 
@@ -371,6 +377,8 @@ public static void main(String[] args)
 wap to create a parameterized constructor .pass the values dynamically at the runtime and display it.
 employee class :- empno,name,designation,salary.
 -------------------------------------------------------------------------------------------------
+example-9
+------------------
 package com.sandip;
 
 public class ConstructorDemo 
@@ -437,6 +445,49 @@ public static void main(String[] args)
 	System.out.println("the sum is "+ob.sum(8.3f, 9.3f));
 	System.out.println("the sum is "+ob1.sum(18.5f,19.3f));
 	
+}
+}
+----------------------------------------------------------------------------------------------------
+example-10
+-------------------
+package com.sandip;
+
+public class GetSet1 
+{
+int rollno;
+String name,address;
+public int getRollno() {
+	return rollno;
+}
+public void setRollno(int rollno) {
+	this.rollno = rollno;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public String getAddress() {
+	return address;
+}
+public void setAddress(String address) {
+	this.address = address;
+}
+}
+--------------------------------------------
+package com.sandip;
+
+public class GetSet2 
+{
+public static void main(String[] args) {
+	GetSet1 ob=new GetSet1();
+	ob.setRollno(10);
+	ob.setName("sandip");
+	ob.setAddress("Bangalore");
+	System.out.println("the rollno is "+ob.getRollno());
+	System.out.println("the name is "+ob.getName());
+	System.out.println("the address is "+ob.getAddress());
 }
 }
 ----------------------------------------------------------------------------------------------------
