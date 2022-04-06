@@ -367,8 +367,79 @@ public static void main(String[] args)
 	
 }
 }
-------------------------------------------------
+-------------------------------------------------------------------------------------------------
+wap to create a parameterized constructor .pass the values dynamically at the runtime and display it.
+employee class :- empno,name,designation,salary.
+-------------------------------------------------------------------------------------------------
+package com.sandip;
 
+public class ConstructorDemo 
+{
+int rollno;//intance variable can be accessed through out the class
+String name,address;
+ConstructorDemo()
+{
+	System.out.println("This is a default constructor");
+}
+//local variable can be accessed within the method()
+
+
+public ConstructorDemo(int rollno, String name, String address) 
+{
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+
+public ConstructorDemo(String name, String address,int rollno) 
+{
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+//function can have any name and it returns a value
+int sum(int a,int b)
+{
+	return a+b;
+}
+
+int sum(int a,int b,int c)
+{
+	return a+b+c;
+}
+
+float sum(float a,float b)
+{
+	return a+b;
+}
+int sub(int a,int b)
+{
+	return a-b;
+}
+void display()
+{
+	System.out.println("the rollno is "+rollno);
+	System.out.println("the name is "+name);
+	System.out.println("the address is "+address);
+	}
+public static void main(String[] args)
+{
+	ConstructorDemo ob=new ConstructorDemo();
+	ConstructorDemo ob1=new ConstructorDemo(101,"sandip","Bangalore");
+	ConstructorDemo ob2=new ConstructorDemo(102,"Kiran","Bangalore");
+	ConstructorDemo ob3=new ConstructorDemo("Kiran","Bangalore",103);
+	ob1.display();ob2.display();ob3.display();
+	System.out.println("the sum is "+ob.sum(8, 9));
+	System.out.println("the sum is "+ob1.sum(18,19));
+	System.out.println("the sub is "+ob.sub(8, 9));
+	System.out.println("the sub is "+ob.sum(8, 9,7));
+	System.out.println("the sub is "+ob1.sub(18,19));
+	System.out.println("the sum is "+ob.sum(8.3f, 9.3f));
+	System.out.println("the sum is "+ob1.sum(18.5f,19.3f));
+	
+}
+}
+----------------------------------------------------------------------------------------------------
 
 
 
