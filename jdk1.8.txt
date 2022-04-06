@@ -532,6 +532,43 @@ public static void main(String[] args) {
 }
 }
 ------------------------------------------------------------------------------
+array of objects
+-----------------------
+package com.sandip;
+import java.util.*;
+public class ArrayObject
+{
+String rollno,name,address;
+void input()
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("Enter rollno,name,address");
+	rollno=ob.nextLine();
+	name=ob.nextLine();
+	address=ob.nextLine();
+}
+void display()
+{
+	System.out.println("the rollno is "+rollno);
+	System.out.println("the name is "+name);
+	System.out.println("the address is "+address);
+	}
+public static void main(String[] args) {
+	ArrayObject[] obj=new ArrayObject[3];//array of objects
+	for(int i=0;i<3;i++)
+	{
+		obj[i]=new ArrayObject();//constructor
+		obj[i].input();
+			}
+	System.out.println("The 3 students are :");
+	for(int i=0;i<3;i++)
+	{
+	obj[i].display();
+	}
+	
+}
+}
+-----------------------------------------------------------------------------------------------------
 
 
 
