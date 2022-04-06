@@ -569,7 +569,10 @@ public static void main(String[] args) {
 }
 }
 -----------------------------------------------------------------------------------------------------
-
+wap to create a Bank class
+enter accno,name,email,balance of 20 customers
+store the data  and display it.
+--------------------------------------------------------------
 
 
 
