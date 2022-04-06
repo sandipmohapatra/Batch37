@@ -495,14 +495,43 @@ Object oriented programming
 --------------------------------------------
 1)class
 2)object
+
 3)Inheritance:-java suppport single inheritance.(single,multi-level,hyrarcal).reuse of existing component.
+
 4)poly-merphisim:- runtime(function overriding),compile time(function overloading)
+
 5)abstraction:-Hiding the complexcity and displaying the simplycity.(example :- fan)
+
 6)encapsulation :- capsul (protecting the medicine)
 In java we can protect our data using access specifiers(private,protected,default,public)
 ----------------------------------------------------------------------------------------------------------------
-
-
+wap to enter product details and display it.
+prodit,prodname,prodprice
+use getter and setter to set the value and get the value.
+-------------------------------------------------------------------------------
+Example-11
+----------------------
+array:- It is a collection of single data type.
+example:- array of integer,array of string.
+---------------------
+package com.sandip;
+import java.util.*;
+public class ArrayDemo 
+{
+public static void main(String[] args) {
+	int a[]=new int[5];
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter 5 nos");
+	for(int i=0;i<5;i++)
+		a[i]=ob.nextInt();
+	
+	System.out.println(" 5 nos are");
+	for(int i=0;i<5;i++)
+		System.out.println(a[i]);
+	
+}
+}
+------------------------------------------------------------------------------
 
 
 
