@@ -491,7 +491,16 @@ public static void main(String[] args) {
 }
 }
 ----------------------------------------------------------------------------------------------------
-
+Object oriented programming 
+--------------------------------------------
+1)class
+2)object
+3)Inheritance:-java suppport single inheritance.(single,multi-level,hyrarcal).reuse of existing component.
+4)poly-merphisim:- runtime(function overriding),compile time(function overloading)
+5)abstraction:-Hiding the complexcity and displaying the simplycity.(example :- fan)
+6)encapsulation :- capsul (protecting the medicine)
+In java we can protect our data using access specifiers(private,protected,default,public)
+----------------------------------------------------------------------------------------------------------------
 
 
 
