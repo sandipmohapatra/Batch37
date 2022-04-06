@@ -1,3 +1,6 @@
+https://github.com/sandipmohapatra/Batch37
+----------------------------------------------------------------------
+
 1)Java is a object Oriented programing language.
 2)It is simpler than c and c++ as we don't have pointer concept,multiple inheritance,operator overloading.
 3)Java support multi-threading or multi-tasking.
@@ -195,7 +198,7 @@ float withdraw()
 	Scanner ob=new Scanner(System.in);
 	System.out.println("enter the withdraw amount");
 	float wd=ob.nextFloat();
-	if(bal >= wd+1000.00)
+	if(bal >= wd+1000.00)//(5000 >=3500+1000)
 		bal=bal-wd;
 	else
 		System.out.println("Balance is low");
@@ -223,6 +226,163 @@ public static void main(String[] args) {
 }
 
 ----------------------------------------------------------------
+constructor :- A constructor is a function which has the same name as that of the class name.
+It doesnot return any value nor it has any return type.
+There are 2 types of constructor.
+1)default constructor :- It is without any parameter.
+2)parameterized constructor:- It is with parameter.
+-------------------------------------------
+package com.sandip;
+
+public class ConstructorDemo 
+{
+int rollno;//intance variable can be accessed through out the class
+String name,address;
+ConstructorDemo()
+{
+	System.out.println("This is a default constructor");
+}
+//local variable can be accessed within the method()
+public ConstructorDemo(int rollno, String name, String address) 
+{
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+void display()
+{
+	System.out.println("the rollno is "+rollno);
+	System.out.println("the name is "+name);
+	System.out.println("the address is "+address);
+	}
+public static void main(String[] args)
+{
+	ConstructorDemo ob=new ConstructorDemo();
+	ConstructorDemo ob1=new ConstructorDemo(101,"sandip","Bangalore");
+	ConstructorDemo ob2=new ConstructorDemo(102,"Kiran","Bangalore");
+	ob1.display();ob2.display();
+}
+}
+--------------------------------------------------------------------------------------
+Difference between function and constructor is function can have any name other than the class name.
+It returns a value.If we use more than one function with same name but with different data types the parameters and return type it is known as function overloading.
+---------------------------------------------------------------------------------------------------
+package com.sandip;
+
+public class ConstructorDemo 
+{
+int rollno;//intance variable can be accessed through out the class
+String name,address;
+ConstructorDemo()
+{
+	System.out.println("This is a default constructor");
+}
+//local variable can be accessed within the method()
+public ConstructorDemo(int rollno, String name, String address) 
+{
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+//function can have any name and it returns a value
+int sum(int a,int b)
+{
+	return a+b;
+}
+
+int sub(int a,int b)
+{
+	return a-b;
+}
+void display()
+{
+	System.out.println("the rollno is "+rollno);
+	System.out.println("the name is "+name);
+	System.out.println("the address is "+address);
+	}
+public static void main(String[] args)
+{
+	ConstructorDemo ob=new ConstructorDemo();
+	ConstructorDemo ob1=new ConstructorDemo(101,"sandip","Bangalore");
+	ConstructorDemo ob2=new ConstructorDemo(102,"Kiran","Bangalore");
+	ob1.display();ob2.display();
+	System.out.println("the sum is "+ob.sum(8, 9));
+	System.out.println("the sum is "+ob1.sum(18,19));
+	System.out.println("the sub is "+ob.sub(8, 9));
+	System.out.println("the sub is "+ob1.sub(18,19));
+	
+}
+}
+------------------------------------------------------------------------------- 
+function overloading
+-----------------------------------------
+package com.sandip;
+
+public class ConstructorDemo 
+{
+int rollno;//intance variable can be accessed through out the class
+String name,address;
+ConstructorDemo()
+{
+	System.out.println("This is a default constructor");
+}
+//local variable can be accessed within the method()
+public ConstructorDemo(int rollno, String name, String address) 
+{
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+//function can have any name and it returns a value
+int sum(int a,int b)
+{
+	return a+b;
+}
+float sum(float a,float b)
+{
+	return a+b;
+}
+int sub(int a,int b)
+{
+	return a-b;
+}
+void display()
+{
+	System.out.println("the rollno is "+rollno);
+	System.out.println("the name is "+name);
+	System.out.println("the address is "+address);
+	}
+public static void main(String[] args)
+{
+	ConstructorDemo ob=new ConstructorDemo();
+	ConstructorDemo ob1=new ConstructorDemo(101,"sandip","Bangalore");
+	ConstructorDemo ob2=new ConstructorDemo(102,"Kiran","Bangalore");
+	ob1.display();ob2.display();
+	System.out.println("the sum is "+ob.sum(8, 9));
+	System.out.println("the sum is "+ob1.sum(18,19));
+	System.out.println("the sub is "+ob.sub(8, 9));
+	System.out.println("the sub is "+ob1.sub(18,19));
+	System.out.println("the sum is "+ob.sum(8.3f, 9.3f));
+	System.out.println("the sum is "+ob1.sum(18.5f,19.3f));
+	
+}
+}
+------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
