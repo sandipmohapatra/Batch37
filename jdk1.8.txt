@@ -496,7 +496,7 @@ Object oriented programming
 1)class
 2)object
 
-3)Inheritance:-java suppport single inheritance.(single,multi-level,hyrarcal).reuse of existing component.
+3)Inheritance:-java suppport single inheritance.(single,multi-level,hyrarchal).reuse of existing component.
 
 4)poly-merphisim:- runtime(function overriding),compile time(function overloading)
 
@@ -533,6 +533,8 @@ public static void main(String[] args) {
 }
 ------------------------------------------------------------------------------
 array of objects
+-----------------------
+example-12
 -----------------------
 package com.sandip;
 import java.util.*;
@@ -573,9 +575,60 @@ wap to create a Bank class
 enter accno,name,email,balance of 20 customers
 store the data  and display it.
 --------------------------------------------------------------
+Inheritance:-java suppport single inheritance.(single,multi-level,hyrarchal).reuse of existing component.
+We use the keyword super to excess the parent class variables and methods into the child class.  
+we use the keyword extends to inherite the parent class into the child class.
+-------------------------------------------------------------------------------------------------------------
+example-13
+--------------------
+package com.sandip;
 
+public class Product
+{
+int prodid;
+String prodname,prodprice;
+public Product(int prodid, String prodname, String prodprice)
+{
+	this.prodid = prodid;
+	this.prodname = prodname;
+	this.prodprice = prodprice;
+}
+void display()
+{
+	System.out.println("the product id is :"+prodid);
+	System.out.println("the product name is :"+prodname);
+	System.out.println("the product price is :"+prodprice);
+	}
 
+}
+-----------------------------------------------------------------
+package com.sandip;
 
+public class Customer extends Product
+{
+int custid;
+String custname,custadd;
+public Customer(int prodid, String prodname, String prodprice, int custid, String custname, String custadd) 
+{
+	super(prodid, prodname, prodprice);//the super class constructor will execute first then the subclass constructor
+	this.custid = custid;
+	this.custname = custname;
+	this.custadd = custadd;
+}
+void display()
+{
+	super.display();
+	System.out.println("the customer id is :"+custid);
+	System.out.println("the customer name is :"+custname);
+	System.out.println("the customer address is :"+custadd);
+	}
+public static void main(String[] args) 
+{
+	Customer obj=new Customer(101,"samsung fridge","18000",1001,"sandip","Bangalore");
+	obj.display();
+}
+}
+--------------------------------------------------------------------------------------------
 
 
 
