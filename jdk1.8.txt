@@ -921,7 +921,9 @@ public static void main(String[] args) {
 }
 }
 -------------------------------------------------------------------------------------------
-
+wap to enter details of a product and store into a LinkedList and display it.
+product --->productid,productname,productprice.
+------------------------------------------------------------------------
 
 
 
