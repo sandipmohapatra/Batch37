@@ -924,9 +924,55 @@ public static void main(String[] args) {
 wap to enter details of a product and store into a LinkedList and display it.
 product --->productid,productname,productprice.
 ------------------------------------------------------------------------
-
-
-
+corejava,jdbc,Hibernate
+html,css,javascript,Bootstrap,Jquery,Angular10
+oracle,Mysql,Mongodb
+spring,spring boot,Micro-services
+AWS
+------------------------------------------------------------------------
+Frontend(angular10)---middleware(spring...)---Backend(oracle,mysql,mongodb)
+----------------------------------------------------------------------------
+testing-------junit,jenkin
+deployment----------docker
+-------------------------------------------------------------
+development
+testing
+production
+---------------------------------------------------------
+Example-18
+---------------------
+package com.sandip;
+import java.util.*;
+public class TwoDimentional
+{
+public static void main(String[] args)
+{
+	int a[][]=new int[3][3];
+	System.out.println("enter 3 *3 array");
+	Scanner ob=new Scanner(System.in);
+	for(int i=0;i<3;i++)//outer loop work for 1 time
+	{
+		for(int j=0;j<3;j++)//work for 3 times
+		{
+			a[i][j]=ob.nextInt();
+		}
+	}
+	
+	System.out.println("The 3 *3 array");
+	for(int i=0;i<3;i++)
+	{
+		for(int j=0;j<3;j++)
+		{
+			System.out.print(a[i][j]+"  ");
+		}
+		System.out.println();
+	}
+	
+}
+}
+----------------------------------------------------------------
+7760213015
+----------------------
 
 
 
