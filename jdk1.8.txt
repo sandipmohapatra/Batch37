@@ -717,9 +717,110 @@ public static void main(String[] args) {
 }
 }
 ---------------------------------------------------------------------------------------------
+Hyrarchal Inheritance
+-----------------------------------
+In this we have a parent class and 2 or more child class
+--------------------------------------------------------------------------------------
+Customer --->phoneno,name,address
+ICICI Bank extends customer--->accno,bal,bank loc
+SBI Bank extends customer---->accno,bal,Bank loc
+-----------------------------------------------------------------------------------------
+Example-15
+-----------------
+package com.hyrarchal;
+import java.util.*;
+public class Customer 
+{
+	String phoneno,name,address;
+	void input()
+	{
+		Scanner ob=new Scanner(System.in);
+		System.out.println("Enter phoneno,name and address");
+		phoneno=ob.nextLine();
+		name=ob.nextLine();
+		address=ob.nextLine();
+			}
+	void display()
+	{
+		System.out.println("The phoneno is "+phoneno+"The name is "+name+" The address is"+address);
+	}
+}
+------------------------------------------------
+package com.hyrarchal;
 
+import java.util.Scanner;
 
+public class ICICIBank extends Customer
+{
+	String accno,bal,bankloc;
+	void input()
+	{
+		super.input();
+		Scanner ob=new Scanner(System.in);
+		System.out.println("Enter accno,Balance and Bank Location");
+		accno=ob.nextLine();
+		bal=ob.nextLine();
+		bankloc=ob.nextLine();
+			}
+	void display()
+	{
+		super.display();
+		System.out.println("The accno is "+accno+"The bal is "+bal+" The bank Location is"+bankloc);
+	}
+}
+--------------------------------------------------------------
+package com.hyrarchal;
 
+import java.util.Scanner;
+
+public class SBIBank extends Customer
+{
+	String accno,bal,bankloc;
+	void input()
+	{
+		super.input();
+		Scanner ob=new Scanner(System.in);
+		System.out.println("Enter accno,Balance and Bank Location");
+		accno=ob.nextLine();
+		bal=ob.nextLine();
+		bankloc=ob.nextLine();
+			}
+	void display()
+	{
+		super.display();
+		System.out.println("The accno is "+accno+"The bal is "+bal+" The bank Location is"+bankloc);
+	}
+}
+----------------------------------------------
+
+package com.hyrarchal;
+
+import java.util.Scanner;
+
+public class MainClass 
+{
+public static void main(String[] args) {
+Scanner ob=new Scanner(System.in);
+	System.out.println("Enter which bank details you want to see 1.ICICI Bank 2.SBI Bank");
+	int choice=ob.nextInt();
+	switch(choice)
+	{
+	case 1:
+		ICICIBank ob1=new ICICIBank();
+		ob1.input();
+		ob1.display();
+		break;
+	case 2:
+		SBIBank ob2=new SBIBank();
+		ob2.input();
+		ob2.display();
+		break;
+		default:
+			System.out.println("Wrong choice");
+	}
+}
+}
+--------------------------------------------------------------------
 
 
 
