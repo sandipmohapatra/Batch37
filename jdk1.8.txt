@@ -629,10 +629,94 @@ public static void main(String[] args)
 }
 }
 --------------------------------------------------------------------------------------------
+Example-14
+-------------------
+1)2 dimentional array
+2)multi-level inheritance
+3)Inheritance (is-a relationship)
+4)Aggrigation-has-a relationship (student has address,employee has dept,bank has customer)
+-----------------------------------------------------------------------------------------
+Multi-level Inheritance
+-------------------------------
+student---rollno,name,address
+marks ---phy,chem,bio
+result ---total,avg,grade
+--------------------------------------------------
+package com.multilevel;
+import java.util.*;
+public class Student 
+{
+	String rollno,name,address;
+	void input()
+	{
+		Scanner ob=new Scanner(System.in);
+		System.out.println("enter rollno,name,address");
+		rollno=ob.nextLine();
+		name=ob.nextLine();
+		address=ob.nextLine();
+	}
+	void display()
+	{
+		System.out.println("the rollno is "+rollno+"The name is "+name+" The address is "+address);
+	}
+}
+------------------------------------------------------------------------------
+package com.multilevel;
 
+import java.util.Scanner;
 
+public class Marks extends Student
+{
+int phy,chem,bio;
+void input()
+{
+	super.input();
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter phy,chem,bio marks");
+	phy=ob.nextInt();
+	chem=ob.nextInt();
+	bio=ob.nextInt();
+}
+void display()
+{
+	super.display();
+System.out.println("The physics marks is"+phy+"The chemistry marks is "+chem+"The biology marks is "+bio);
+}
+}
+---------------------------------------------------------
+package com.multilevel;
 
-
+public class Result extends Marks 
+{
+int total,avg,grade;
+void input()
+{
+	super.input();
+	total=phy+chem+bio;
+	avg=total/3;
+	
+}
+void display()
+{
+	super.display();
+	System.out.println("the total marks is "+total);
+	System.out.println("the average marks is "+avg);
+	if(avg>=70)
+		System.out.println("First Division");
+	else if(avg>=60)
+		System.out.println("Second Division");
+	else if(avg>=50)
+		System.out.println("Third Division");
+	else
+		System.out.println("Fail");
+	}
+public static void main(String[] args) {
+	Result ob=new Result();
+	ob.input();
+	ob.display();
+}
+}
+---------------------------------------------------------------------------------------------
 
 
 
