@@ -874,6 +874,66 @@ public static void main(String[] args) {
 }
 }
 --------------------------------------------------------------------------
+Array and Collection
+1)In array we have to mention the array size.
+int a[]=new int[5];
+1)In collection we don't have mention the size it dynamically increase when we add elements and dynamically decrease when we delete the elements.
+---------------------------------------------------------------
+2)we have array of integer,float,double,string etc....
+2)In collection we enter and store Objects.
+----------------------------------------------------------------
+Example -17
+----------------------
+package com.collection;
+
+public class Employee 
+{
+int empno;
+String name,phoneno;
+public Employee(int empno, String name, String phoneno)
+{
+	this.empno = empno;
+	this.name = name;
+	this.phoneno = phoneno;
+	}
+@Override
+public String toString() {
+	return "Employee [empno=" + empno + ", name=" + name + ", phoneno=" + phoneno + "]";
+}
+
+}
+------------------------------------------------------------------------------
+package com.collection;
+import java.util.*;
+public class TestCollection 
+{
+public static void main(String[] args) {
+	Employee ob1=new Employee(101,"sandip","7766554433");
+	Employee ob2=new Employee(102,"sai","7766554433");
+	Employee ob3=new Employee(103,"venket","7766554433");
+	Employee ob4=new Employee(104,"sunil","7766554433");
+	LinkedList ls=new LinkedList();
+	ls.add(ob1);
+	ls.add(ob2);
+	ls.add(ob3);
+	ls.add(ob4);
+	System.out.println(ls);
+}
+}
+-------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
