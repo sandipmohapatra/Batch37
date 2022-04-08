@@ -971,11 +971,46 @@ public static void main(String[] args)
 }
 }
 ----------------------------------------------------------------
-7760213015
-----------------------
+Method Overloading
+Method Overriding
+Abstract class
+Interface
+static keyword
+final keyword
+--------------------------------------------------
+Method Overloading
+It mean we will have same method name with different data types the return type and parameters.
+int sum(int a,int b)
+float sum(float a,float b)
+double sum(double a,double b)
+-------------------------------------------------------------------- 
+Example-19
+-----------------
+package org.methodOverloading;
 
-
-
+public class OverLoadDemo
+{
+int sum(int a,int b)
+{
+	return a+b;
+}
+float sum(float a,float b)
+{
+	return a+b;
+}
+double sum(double a,double b)
+{
+	return a+b;
+}
+public static void main(String[] args) {
+	OverLoadDemo ob=new OverLoadDemo();
+	System.out.println("the sum of 2 nos is :"+ob.sum(7, 8));
+	System.out.println("the sum of 2 nos is :"+ob.sum(7.3, 8.4));
+	System.out.println("the sum of 2 nos is :"+ob.sum(7.2f, 8.2f));
+	System.out.println("the sum of 2 nos is :"+ob.sum(17, 18));
+	}
+}
+--------------------------------------------------------------------------
 
 
 
