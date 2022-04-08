@@ -1089,7 +1089,7 @@ public class ChildDemo extends AbstractClass
 }
 -----------------------------------------------
 Interface :-
-It contains only abstract methhods.
+It contains only abstract methods.
 It doesn't contain any concrete methods.
 We cannnot create object of an interface.
 We have to implement the interface into a child class.
@@ -1144,11 +1144,44 @@ public class InterfaceDemo implements apple,grapes
 		System.out.println("the value of a is "+a);
 	}
 }
--------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+wap to enter 2 interger,2 float,2 double and find the sum using interface and child class.
+----------------------------------------------------------------------------------------------------------------
 
+package org.methodOverloading;
 
+interface SumDemo
+{
+	int sum(int a,int b);
+	float sum(float a,float b);
+	double sum(double a,double b);
+}
+public class InterfaceDemo1 implements SumDemo
+{
 
+	@Override
+	public int sum(int a, int b) {
+	
+		return a+b;
+	}
 
+	@Override
+	public float sum(float a, float b) {
+		return a+b;
+	}
+
+	@Override
+	public double sum(double a, double b) {
+		return a+b;
+	}
+public static void main(String[] args) {
+	InterfaceDemo1 ob=new InterfaceDemo1();
+	System.out.println("the sum is "+ob.sum(4, 7));
+	System.out.println("the sum is "+ob.sum(4.4f, 7.5f));
+	System.out.println("the sum is "+ob.sum(4.3, 7.333));
+}
+}
+----------------------------------------------------------------------
 
 
 
