@@ -1219,7 +1219,59 @@ public static void main(String[] args) //main is static method we don't have to 
 }
 }
 ----------------------------------------------------------------------------------
+example-25
+---------------------
+package org.methodOverloading;
 
+public class StaticDemo
+{
+static int x=10;
+static int sum(int a,int b)
+{
+	return a+b;
+	}
+static void display()
+{
+	x++;
+	System.out.println("the value of  x is "+x);
+		}
+
+public static void main(String[] args) //main is static method we don't have to create object for main()
+{
+	display();
+	display();
+	display();
+	display();
+	System.out.println("the sum is "+StaticDemo.sum(6,7));
+	System.out.println("The value of x is "+x);
+}
+}
+-------------------------------------------------------
+final :-
+This is done to protect our data.
+we can declare variable as final,method as final and class as final.
+final class cannot be inherited.
+final variable cannot be changed.
+final method cannot be overrided.
+----------------------------------------------------------------------
+example-26
+------------------
+package org.methodOverloading;
+
+public final class FinalDemo 
+{
+final int a=10;
+final void display()
+{
+	System.out.println("This is a final method");
+}
+public static void main(String[] args) {
+	FinalDemo ob=new FinalDemo();
+	ob.display();
+	System.out.println("the value of a is "+ob.a);
+}
+}
+---------------------------------------------------------------------
 
 
 
