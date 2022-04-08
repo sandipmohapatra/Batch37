@@ -1088,6 +1088,77 @@ public class ChildDemo extends AbstractClass
 
 }
 -----------------------------------------------
+Interface :-
+It contains only abstract methhods.
+It doesn't contain any concrete methods.
+We cannnot create object of an interface.
+We have to implement the interface into a child class.
+We have to override the abstract methods into a child class and create object of the child class.
+By interface we can perform multiple inheritance.
+If we declare a variable inside the interface it by default static and final.
+The override methods should be public.
+-----------------------------------------------------------------------------------------------------------------------
+example-22
+----------------------
+package org.methodOverloading;
+
+interface apple
+{
+	int a=10; //the variable a is static and final
+	void display();
+}
+
+interface orange
+{
+	void display1();
+}
+
+interface grapes extends orange
+{
+	void display2();
+}
+
+public class InterfaceDemo implements apple,grapes 
+{
+
+	@Override
+	public void display1() {
+	System.out.println("display1");
+	}
+
+	@Override
+	public void display2() {
+		System.out.println("display2");	
+		
+	}
+
+	@Override
+	public void display() {
+		System.out.println("display3");
+	}
+	public static void main(String[] args) {
+		InterfaceDemo ob=new InterfaceDemo();
+		ob.display();
+		ob.display1();
+		ob.display2();
+		System.out.println("the value of a is "+a);
+	}
+}
+-------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
