@@ -978,7 +978,7 @@ Interface
 static keyword
 final keyword
 --------------------------------------------------
-Method Overloading
+Method Overloading.It is known as compile time Polymorphism.Compiler will deside where to send the values.We require a single class.
 It mean we will have same method name with different data types the return type and parameters.
 int sum(int a,int b)
 float sum(float a,float b)
@@ -1011,10 +1011,83 @@ public static void main(String[] args) {
 	}
 }
 --------------------------------------------------------------------------
+Method Overriding :- we require two or more classes for method overriding.
+It is known as runtime polymorphism.
+-----------------------------------------------------------
+Example-20
+----------------
+package org.methodOverloading;
 
+class OverridingDemo1 
+{
+void display()
+{
+	System.out.println("This is first display method");
+}
+}
+class OverridingDemo extends OverridingDemo1
+{
+	void display()
+	{
+		System.out.println("This is second display method");
+	}
+	public static void main(String[] args) {
+		OverridingDemo ob=new OverridingDemo();
+		ob.display();
+	}
+}
+-------------------------------------------------------------------------------------------
+Real example of method Overriding is present in Abstract class and Interface.
+Use of method Overriding.
+-------------------------------------
+we are going to develop a banking project. The client wants 5 modules 1)registration 2)login 3)deposite 4)withdraw 5)apply for debit/credit card.
+the project artitech will create a abstract class Bank and in that these 5 abstract methods are present.
+The abstract means it is a incomplete class and method.the developers has to override the methods into the child class and write the functionalities.
+---------------------------------------------------------------------------------- 
+Abstract class
+-------------------
+It is a class which conatins abstract methods and concrete methods.
+Abstract methods are incomplete methods without body.
+The concrete methods are methods with body.(general methods.
+we cannot create object of the abstract class.
+we have to inherite it into a child class where we have to override the abstract methods.
+Then we can create object of the child class and access the methods.
+In java we have to have a method body or we have to declare the method as abstract.
+---------------------------------------------------------------------------------------------------------------
+Example-21
+--------------------
+package org.methodOverloading;
 
+abstract class AbstractClass
+{
+	abstract void display();
+	abstract void display1();
+	void display2()
+	{
+		System.out.println("This is method with body");
+	}
+}
+public class ChildDemo extends AbstractClass 
+{
 
+	@Override
+	void display() {
+			System.out.println("This is a override method1");
+	}
 
+	@Override
+	void display1() {
+		System.out.println("This is a override method2");
+			}
+	public static void main(String[] args) {
+		ChildDemo ob=new ChildDemo();
+		ob.display();
+		ob.display1();
+		ob.display2();
+	}
+
+}
+-----------------------------------------------
 
 
 
