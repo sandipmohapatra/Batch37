@@ -1272,6 +1272,28 @@ public static void main(String[] args) {
 }
 }
 ---------------------------------------------------------------------
+Collection framework
+--------------------------------------
+collection frame is a collection of objects.
+It dynamically increases when we add the data and decreases when we the delete data.
+In this we store ,manipulate the group of objects.
+We do operations like searching ,sorting ,insertion ,deleteing etc.
+Java collection provides many interfaces(Set,List,Map)
+It provides many class like (Arraylist,Vector,LinkedList,HashSet,TreeSet,LinkedHashSet,HashMap,HashTable)
+--------------------------------------------------------------------------------------------------
+In array we write
+int a[]=new int[5];//here the array size is fixed but in collection the size is not fixed.It increases and decreses automatically.
+
+1)set(interface)---(classes)--TreeSet,HashSet,LinkedHashSet
+2)list(interface)---(classes)--LinkedList,ArrayList,Vector,Stack
+3)map(interface)---(classes)---HashTable,HashMap
+-----------------------------------------------------------------------------------------
+1)set(interface)
+It does not allow duplicate values.
+1)Hashset---Displays data in random order
+2)LinkedHashSet---Displays data in the same oreder.
+3)TreeSet---It displays data in sorted order.
+---------------------------------------------------------------------------------
 
 
 
