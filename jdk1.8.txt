@@ -1524,7 +1524,32 @@ for(Object obj:hs)
 }
 }
 ---------------------------------------------------------------------------------------
+package org.sandip;
 
+import java.util.*;
+
+public class HashSetDemo1 
+{
+public static void main(String[] args) 
+{
+HashSet hs=new HashSet();
+hs.add(10);
+hs.add(30);
+hs.add(20);
+hs.add(50);
+hs.add(40);
+//for each loop
+for(Object obj:hs)
+	System.out.println(obj);
+System.out.println("*************************");
+Iterator it=hs.iterator();
+while(it.hasNext())
+{
+	System.out.println(it.next());
+}
+}
+}
+-----------------------------------------------------------------------------------------------------
 
 
 
