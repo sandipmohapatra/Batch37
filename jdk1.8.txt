@@ -1481,6 +1481,24 @@ System.out.println(hs.size());
 }
 }
 ------------------------------------------------------------------------------
+phone no validation
+----------------------------
+package org.sandip;
+
+public class Phone {
+    private static boolean isValid(String s)
+    {
+        String regex = "\\d{3}-\\d{3}-\\d{4}"; 
+        return s.matches(regex);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isValid("123-456-7890"));
+    }
+
+}
+---------------------------------------------------------------
+
 
 
 
