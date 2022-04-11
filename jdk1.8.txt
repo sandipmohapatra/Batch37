@@ -1416,7 +1416,44 @@ public static void main(String[] args)
 }
 }
 ------------------------------------------------------------------------------
+Example-1
+------------------
+package org.sandip;
 
+public class Student
+{
+int rollno;
+String name,address;
+public Student(int rollno, String name, String address)
+{
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+@Override
+public String toString() {
+	return "Student [rollno=" + rollno + ", name=" + name + ", address=" + address + "]";
+}}
+---------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class TreeSet1
+{
+public static void main(String[] args) 
+{
+	HashSet ts=new HashSet();// hetrogenious datatype is posible in hashset but not in TreeSet.
+	ts.add("Bhushan");
+	ts.add("Anu");
+	Integer a=new Integer(10);
+	Float b=new Float(10.34);
+	ts.add(a);
+	ts.add(b);
+	Student obj=new Student(101,"sandip","Bangalore");
+	ts.add(obj);
+	System.out.println(ts);
+}
+}
+-------------------------------------------------------------------------------------------
 
 
 
