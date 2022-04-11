@@ -1294,7 +1294,128 @@ It does not allow duplicate values.
 2)LinkedHashSet---Displays data in the same oreder.
 3)TreeSet---It displays data in sorted order.
 ---------------------------------------------------------------------------------
-
+example-1
+-----------------
+package org.sandip;
+import java.util.*;
+public class TreeSet1
+{
+public static void main(String[] args) 
+{
+	TreeSet<Integer> ts=new TreeSet<Integer>();
+	ts.add(40);
+	ts.add(50);
+	ts.add(60);
+	ts.add(30);
+	ts.add(20);
+	ts.add(10);
+	System.out.println(ts);
+}
+}
+-----------------------------------------------------
+example-2
+----------------------
+package org.sandip;
+import java.util.*;
+public class TreeSet1
+{
+public static void main(String[] args) 
+{
+	TreeSet<String> ts=new TreeSet<String>();
+	ts.add("Sandip");
+	ts.add("Amit");
+	ts.add("Arun");
+	ts.add("Sunil");
+	ts.add("Arpit");
+	ts.add("Bhushan");
+	System.out.println(ts);
+}
+}
+---------------------------------------------------------------------
+example-3
+------------------
+package org.sandip;
+import java.util.*;
+public class TreeSet1
+{
+public static void main(String[] args) 
+{
+	TreeSet<String> ts=new TreeSet<String>();
+	ts.add("Sandip");
+	ts.add("Amit");
+	ts.add("Arun");
+	ts.add("Sunil");
+	ts.add("Arpit");
+	ts.add("Bhushan");
+	ts.add("anu"); // a ascii value is 97 so it displays at the last 
+	System.out.println(ts);
+}
+}
+----------------------------------------------------------------
+HashSet display data in random order
+---------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class TreeSet1
+{
+public static void main(String[] args) 
+{
+	HashSet<String> ts=new HashSet<String>();
+	ts.add("Sandip");
+	ts.add("Amit");
+	ts.add("Arun");
+	ts.add("Sunil");
+	ts.add("Arpit");
+	ts.add("Bhushan");
+	ts.add("anu");
+	System.out.println(ts);
+}
+}
+---------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class TreeSet1
+{
+public static void main(String[] args) 
+{
+	HashSet<String> ts=new HashSet<String>();
+	ts.add("Bhushan");
+	ts.add("anu");
+	ts.add("Arpit");
+	ts.add("Bhushan");
+	ts.add("anu");
+	ts.add("Sandip");
+	ts.add("Amit");
+	ts.add("Arun");
+	ts.add("Sunil");
+	ts.add("Arpit");
+	System.out.println(ts);
+}
+}
+----------------------------------------------------------
+LinkedHashSet :- It display in the same order.
+-----------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class TreeSet1
+{
+public static void main(String[] args) 
+{
+	LinkedHashSet<String> ts=new LinkedHashSet<String>();
+	ts.add("Bhushan");
+	ts.add("anu");
+	ts.add("Arpit");
+	ts.add("Bhushan");
+	ts.add("anu");
+	ts.add("Sandip");
+	ts.add("Amit");
+	ts.add("Arun");
+	ts.add("Sunil");
+	ts.add("Arpit");
+	System.out.println(ts);
+}
+}
+------------------------------------------------------------------------------
 
 
 
