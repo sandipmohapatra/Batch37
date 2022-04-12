@@ -1818,12 +1818,109 @@ public static void main(String[] args) {
 }
 }
 --------------------------------------------------------------
+Example-2
+---------------------
+package org.Exception;
+import java.util.*;
+public class ExceptionDemo 
+{
+public static void main(String[] args) {
+	try
+	{
+		int a[]=new int[5]; 
+	Scanner ob=new Scanner(System.in);
+		System.out.println("enter 5 nos");
+	for(int i=0;i<5;i++)
+	{
+		a[i]=ob.nextInt();
+	}
+	System.out.println(" 5 nos");
+	for(int i=0;i<=5;i++)
+	{
+		System.out.println(a[i]);
+	}
+		}
+	catch(Exception ae)
+	{
+		System.out.println(ae);
+	}
+	System.out.println("Hi all");
+}
+}
+---------------------------------------------------------------------
+***
+If there is no runtime error the catch block will not execute.
+If there is no runtime error also  the finally block will  execute.It is used for database connection closing,file closing etc.
+--------------------------------------------------------------------------------------
+Example-3
+---------------------
+package org.Exception;
+import java.util.*;
+public class ExceptionDemo 
+{
+public static void main(String[] args) {
+	try
+	{
+		int a[]=new int[5]; 
+	Scanner ob=new Scanner(System.in);
+		System.out.println("enter 5 nos");
+	for(int i=0;i<5;i++)
+	{
+		a[i]=ob.nextInt();
+	}
+	System.out.println(" 5 nos");
+	for(int i=0;i<5;i++)
+	{
+		System.out.println(a[i]);
+	}
+		}
+		finally
+	{
+	System.out.println("Hi all");
+	}
+}
+}
+-------------------------------------------------------------------------------------
+There are 2 types of exception
+1)checked exception:- sqlexception,Thread,servlet,
+2)Unchecked Exception:- Airthmatic exception,arrayIndexOutOfBound,InputMismatch...
 
-
-
-
-
-
+-----------------------------------------
+Throws
+--------------------
+package org.Exception;
+import java.util.*;
+public class ExceptionDemo extends Thread
+{
+public static void main(String[] args) throws InterruptedException 
+{
+	for(int i=0;i<=10;i++)
+	{
+		System.out.println(i);
+		sleep(1000); //1 sec delay
+	}
+}
+}
+----------------------------------------------------------------------
+Throw
+------------------
+package org.Exception;
+import java.util.*;
+public class ExceptionDemo 
+{
+public static void main(String[] args) throws Exception 
+{
+	Scanner ob=new Scanner(System.in);
+	System.out.println("Enter your age");
+	int age=ob.nextInt();
+	if(age>=18)
+		System.out.println("eligible to vote");
+	else
+		throw new Exception("Not Eligible to vote");
+		
+}
+}
+----------------------------------------------------------------
 
 
 
