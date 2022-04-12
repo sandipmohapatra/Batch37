@@ -1638,6 +1638,7 @@ public static void main(String[] args)
 	ob1.add(std1);
 	ob1.add(std2);
 	ob1.add(std3);
+System.out.println(ob1);
 	Iterator itr=ob1.iterator();
 	while(itr.hasNext())
 	{
@@ -1648,6 +1649,32 @@ System.out.println(st.rollno+"  "+st.name+"  "+st.address);
 }
 }
 -----------------------------------------------------------------------------------------------
+ListIterator :- It will move in forward direction as well in backward direction.
+package org.sandip;
+import java.util.*;
+public class ListIteratorDemo 
+{
+public static void main(String[] args) {
+	LinkedList li=new LinkedList();
+	li.add(10);
+	li.add(30);
+	li.add(20);
+	li.add(40);
+	li.add(50);
+	ListIterator ll=li.listIterator();
+	System.out.println("forward direction");
+	while(ll.hasNext())
+	{
+		System.out.println(ll.next());
+	}
+	System.out.println("backward direction");
+	while(ll.hasPrevious())
+	{
+		System.out.println(ll.previous());
+	}
+}
+}
+-----------------------------------------------------------------------------------------------------
 
 
 
