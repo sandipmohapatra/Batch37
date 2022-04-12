@@ -1774,8 +1774,50 @@ public static void main(String[] args)
 	
 }
 }
-------------------------------------------------------------------
+------------------------------------------------------------------HashMap---------------------------
+create a bank project (accno,name,balance)
+store into a HashMap and display the record which the customer wants to see entering  his accno.
+----------------------------------------------------------------------------
+Exception Handling
+--------------------------------
+There are 3 type of error.
+1)logical error (wrong logic)
+2)compilation error (It is due to missing of ; or spelling mistake)
+3)runtime exception.
+example :-
+a) dividing the no by zero.
+b) instead of integer if we enter  string.(input mismatch)
+c) Enter extra elements in an array.(arrayindexoutofbound )
 
+we have to handle the runtime exception display proper error message.so that the program should not terminate in between.
+----------------------------------------------------------
+we have 5 keyword 1)try 2)catch 3)finally 4)throws 5)throw (use defined exception)
+--------------------------------------------------------------------------------------------
+Example-1
+---------------------
+package org.Exception;
+import java.util.*;
+public class ExceptionDemo 
+{
+public static void main(String[] args) {
+	try
+	{
+	Scanner ob=new Scanner(System.in);
+		System.out.println("enter 2 nos");
+	int a=ob.nextInt();
+	int b=ob.nextInt();
+	
+	int c=a/b;
+	System.out.println("The result is "+c);
+	}
+	catch(Exception ae)
+	{
+		System.out.println(ae);
+	}
+	System.out.println("Hi all");
+}
+}
+--------------------------------------------------------------
 
 
 
