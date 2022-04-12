@@ -1748,8 +1748,33 @@ public static void main(String[] args)
 		}
 }
 -----------------------------------------------------------------------------------------------
-
-
+Queue :- First In First Out
+-----------------------------------------------
+It is a orderlist that can hold element in the same order.
+------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class QueueDemo 
+{
+public static void main(String[] args) 
+{
+	PriorityQueue qu=new PriorityQueue();
+	qu.add("Ashok");
+	qu.add("Anil");
+	qu.add("Sunil");
+	qu.add("Arpit");
+	qu.add("Sandip");
+	System.out.println(qu);
+	System.out.println("*************************");
+	System.out.println(qu.element());//it will display the head element
+	System.out.println(qu.peek());//it will display the head element
+	System.out.println(qu.remove());///it will remove the head element
+	System.out.println(qu.poll());///it will remove the head element
+	
+	
+}
+}
+------------------------------------------------------------------
 
 
 
