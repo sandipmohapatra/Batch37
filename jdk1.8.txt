@@ -1705,7 +1705,49 @@ public static void main(String[] args)
 	System.out.println(hm);
 }
 }
---------------------------------------------------------
+-------------------------------Searching Using HashMap-------------------------
+Example-2
+-------------------
+package org.sandip;
+
+public class Student
+{
+int rollno;
+String name,address;
+public Student(int rollno, String name, String address)
+{
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+@Override
+public String toString() {
+	return "Student [rollno=" + rollno + ", name=" + name + ", address=" + address + "]";
+}
+}
+------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class HashMapDemo1 
+{
+public static void main(String[] args) 
+{
+	HashMap<Integer,Student> hm=new HashMap<Integer,Student>();
+	Student st1=new Student(101,"sandip","Bangalore");
+	Student st2=new Student(102,"Sunil","Bangalore");
+	Student st3=new Student(103,"Pradeep","Bangalore");
+	hm.put(1,st1);
+	hm.put(2,st2);
+	hm.put(3,st3);
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter the no you want to search");
+	int no=ob.nextInt();
+	for(Map.Entry<Integer,Student> m:hm.entrySet())
+		if(m.getKey()==no)
+			System.out.println(m.getKey()+"   "+m.getValue());
+		}
+}
+-----------------------------------------------------------------------------------------------
 
 
 
