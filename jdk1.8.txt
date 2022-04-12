@@ -1550,8 +1550,32 @@ while(it.hasNext())
 }
 }
 -----------------------------------------------------------------------------------------------------
-
-
+List:- It allows duplicate values.
+It will display the data in the same order.
+example-1
+-------------------
+package org.sandip;
+import java.util.*;
+public class ListDemo 
+{
+public static void main(String[] args) 
+{
+List li=new ArrayList();
+li.add(10);
+li.add(50);
+li.add(40);
+li.add(30);
+li.add(20);
+System.out.println(li);
+li.add(3,100);//inserting in between
+System.out.println(li);
+li.remove(2);//Removing from in between
+System.out.println(li);
+li.set(2, 1000); //replace the 3rd no with 1000
+System.out.println(li);
+}
+}
+-----------------------------------------------------
 
 
 
