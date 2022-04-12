@@ -1291,7 +1291,7 @@ int a[]=new int[5];//here the array size is fixed but in collection the size is 
 1)set(interface)
 It does not allow duplicate values.
 1)Hashset---Displays data in random order
-2)LinkedHashSet---Displays data in the same oreder.
+2)LinkedHashSet---Displays data in the same order.
 3)TreeSet---It displays data in sorted order.
 ---------------------------------------------------------------------------------
 example-1
@@ -1675,6 +1675,47 @@ public static void main(String[] args) {
 }
 }
 -----------------------------------------------------------------------------------------------------
+Map :- It is a interface.
+In this we enter key and value pair.
+The key shouldnot be duplicate .The value can be duplicate.
+The key and value pair is known as entry.
+Map is useful to search,update,delete element on the basis of the key.
+---------------------------------------------------------------------------------------
+Map :- HashMap,LinkedHashMap,TreeMap 
+
+Example-1
+-----------------
+package org.sandip;
+import java.util.*;
+public class HashMapDemo
+{
+public static void main(String[] args) 
+{
+	HashMap<Integer, String> hm=new HashMap<Integer, String>();
+	hm.put(1, "sandip");
+	hm.put(2,"Akhila");
+	hm.put(3,"Ashok");
+	hm.put(4,"Anusha");
+	hm.put(5,"Arpit");
+	Scanner ob=new Scanner(System.in);
+	System.out.println("enter rollno,name");
+	int rollno=ob.nextInt();
+	String name=ob.next();
+	hm.put(rollno, name);
+	System.out.println(hm);
+}
+}
+--------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 
 
