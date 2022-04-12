@@ -1604,7 +1604,50 @@ System.out.println(ss);
 }
 }
 --------------------------------------------------------------------------------------
+example-ArrayList
+----------------------------------
+package org.sandip;
 
+public class Student
+{
+int rollno;
+String name,address;
+public Student(int rollno, String name, String address)
+{
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+@Override
+public String toString() {
+	return "Student [rollno=" + rollno + ", name=" + name + ", address=" + address + "]";
+}
+
+}
+--------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class ArrayList1 
+{
+public static void main(String[] args) 
+{
+	Student std1=new Student(101,"amit","Bangalore");
+	Student std2=new Student(102,"anil","Bangalore");
+	Student std3=new Student(103,"sunil","Bangalore");
+	ArrayList<Student> ob1=new ArrayList<Student>();
+	ob1.add(std1);
+	ob1.add(std2);
+	ob1.add(std3);
+	Iterator itr=ob1.iterator();
+	while(itr.hasNext())
+	{
+		Student st=(Student) itr.next();
+System.out.println(st.rollno+"  "+st.name+"  "+st.address);
+	}
+	
+}
+}
+-----------------------------------------------------------------------------------------------
 
 
 
