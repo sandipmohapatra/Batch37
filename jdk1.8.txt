@@ -2167,7 +2167,12 @@ public static void main(String[] args) {
 	}
 }
 -------------------------------------------------------------------------------
-
+Thread synchronized :- In this one thread complete the execution then the second thread will start executing.
+In this all the start() will not run concurrently.
+Example:- ATM one person complete the transaction then the second person do the transaction .This is one after the other.
+------------------------------------------------------------------------------------------
+DeadLock :- When one thread is waiting for another thread to execute and the other thread is waiting for this thread to execute then a deadlock situation is created.
+-----------------------------------------------------------------------------------------------
 
 
 
