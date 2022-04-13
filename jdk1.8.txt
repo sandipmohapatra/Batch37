@@ -2173,7 +2173,54 @@ Example:- ATM one person complete the transaction then the second person do the 
 ------------------------------------------------------------------------------------------
 DeadLock :- When one thread is waiting for another thread to execute and the other thread is waiting for this thread to execute then a deadlock situation is created.
 -----------------------------------------------------------------------------------------------
+Example-4
+-------------------
+package org.ThreadDemo;
 
+public class SynchronizedDemo implements Runnable 
+{
+
+	@Override
+	synchronized public void run() {
+		try
+		{
+			String name=Thread.currentThread().getName();
+			for(int i=1;i<=10;i++)
+			{
+				System.out.println(name+"  "+i);
+				Thread.sleep(1000);
+				if(name.equals("Sai")&& (i==4))
+				{
+					wait();
+				}
+				if(name.equals("Shilpa")&& (i==4))
+				{
+					wait();
+				}
+				if(name.equals("Anusha")&& (i==6))
+				{
+					notifyAll();
+				}
+				if(name.equals("Sai")&& (i==9))
+				{
+					notify();
+				}
+			}
+		}
+		catch(Exception ae)
+		{
+			ae.printStackTrace();
+		}
+	}
+public static void main(String[] args) {
+	SynchronizedDemo ob=new SynchronizedDemo();
+	Thread ob1=new Thread(ob,"Sai");
+	Thread ob2=new Thread(ob,"Shilpa");
+	Thread ob3=new Thread(ob,"Anusha");
+	ob1.start();ob2.start();ob3.start();
+}
+}
+-------------------------------------------------------------------------------
 
 
 
