@@ -2036,7 +2036,137 @@ f2.start();
 f3.start();
 }
 }
------------------------------------
+-----------------------------------------------------------------------------------------------
+There are 3 threads or three classes 1)FirstThread,2)SecondThread 3)ThirdThread.each having run().
+The run() is called by start().all start method excecute cuncurrently.So the output is a mixture.
+-----------------------------------------------------------------------------------------------
+In Multi-Threading we can inherite Thread class or implement runnable interface.In the runnable interface we have one method that is run().
+--------------------------------------------------------------------------------------------------
+Thread Life cycle
+----------------------------
+1)new born Thread
+2)start
+3)runnable(choose the thread)
+4)running
+5)block/wait/sleep
+6)dead(excution is completed)
+--------------------------------------------------------------------
+Methods in Thread class
+---------------------------------------------
+1)getName() :-It gets the name of the Thread
+2)isAlive() :-It check if the thread is still running or completed its execution .It return boolean value.
+3)run():-Entry point for the thread.
+4)start():- It starts a thread by calling the run().
+5)sleep():-It is based on the requirement we can make a thread sleep or wait for a specific time period.
+6)setPriority():- we can set the thread priority.
+7)getPriority():- we can get the thread priority.
+8)MIN_PRIORITY --range (1 to 4)
+  NORMAL_PRIORITY --5
+MAX_PRIORITY --range (6 to 10)
+9)Daemon Thread :- It is low priority thread which runs in the background doing garbage collection.
+10)wait() :- The thread will wait until other thread doesnot notify.
+11)notify():- wake up a thread which is in waiting state.
+12)notifyAll():- This will wake up all the waiting threads.
+--------------------------------------------------------------------------------------------------------------------
+example-1
+--------------------
+package org.ThreadDemo;
+public class FirstThread extends Thread
+{
+public void run()
+{
+	try
+	{
+	for(int i=1;i<=10;i++)
+	{
+		System.out.println(currentThread().getName() +"  "+i);
+	sleep(1000);
+	}
+	}
+	catch( Exception ae)
+	{
+		ae.printStackTrace();
+	}
+}
+public static void main(String[] args) {
+	FirstThread f1=new FirstThread();
+	FirstThread f2=new FirstThread();
+	FirstThread f3=new FirstThread();
+	f1.start();
+	f2.start();
+	f3.start();
+}
+}
+------------------------------------------------------------------------------------------
+example-2
+-------------------
+package org.ThreadDemo;
+public class FirstThread extends Thread
+{
+public void run()
+{
+	try
+	{
+	for(int i=1;i<=10;i++)
+	{
+		System.out.println(currentThread().getName() +"  "+i);
+	sleep(1000);
+	}
+	}
+	catch( Exception ae)
+	{
+		ae.printStackTrace();
+	}
+}
+public static void main(String[] args) {
+	FirstThread f1=new FirstThread();
+	FirstThread f2=new FirstThread();
+	FirstThread f3=new FirstThread();
+	System.out.println(f1.isAlive());
+	f1.start();
+	System.out.println(f1.isAlive());
+	f2.start();
+	f3.start();
+}
+}
+--------------------------------------------------------------------------------------
+Example-3
+-------------------------
+package org.ThreadDemo;
+public class FirstThread extends Thread
+{
+public void run()
+{
+	try
+	{
+	for(int i=1;i<=10;i++)
+	{
+		System.out.println(currentThread().getName() +"  "+i);
+	sleep(1000);
+	}
+	}
+	catch( Exception ae)
+	{
+		ae.printStackTrace();
+	}
+}
+public static void main(String[] args) {
+	FirstThread f1=new FirstThread();
+	FirstThread f2=new FirstThread();
+	FirstThread f3=new FirstThread();
+	f1.setPriority(MAX_PRIORITY);
+	f2.setPriority(MIN_PRIORITY);
+	System.out.println(f1.isAlive());
+	f1.start();
+	System.out.println(f1.isAlive());
+	f2.start();
+	f3.start();
+	System.out.println(f1.getPriority());
+	System.out.println(f2.getPriority());
+	System.out.println(f3.getPriority());
+	}
+}
+-------------------------------------------------------------------------------
 
 
 
