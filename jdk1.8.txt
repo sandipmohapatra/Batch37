@@ -1951,6 +1951,104 @@ public static void main(String[] args)
 }
 }
 -------------------------------------------------------------------------------------------------------------------------------
+Thread -It is a sort of execution of instruction.Till now we have done single thread program .The program started from main method and ends.But in multi-threaded program we have multiple threads running concurrently.
+-------------------------------------------------------------
+Multi Threaded program
+----------------------------------------
+Each thread will do some task.
+In this we will have run method and start().The start() will call the run().
+Multiple start() will execute simultaniously or cuncurrently.
+In this we have to either extend Thread class or implement runnable interface.
+We there is muliple start() running concurrently there will be thread switching because there is only one processer.
+-------------------------------------------------------------------------------------
+example-1
+-------------------
+package org.ThreadDemo;
+public class FirstThread extends Thread
+{
+public void run()
+{
+	try
+	{
+	for(int i=1;i<=10;i++)
+	{
+		System.out.println("Thread1 "+i);
+	sleep(1000);
+	}
+	}
+	catch( Exception ae)
+	{
+		ae.printStackTrace();
+	}
+}
+}
+------------------------
+package org.ThreadDemo;
+public class SecondThread extends Thread
+{
+public void run()
+{
+	try
+	{
+	for(int i=1;i<=10;i++)
+	{
+		System.out.println("Thread2 "+i);
+	sleep(1000);
+	}
+	}
+	catch( Exception ae)
+	{
+		ae.printStackTrace();
+	}
+}
+}
+----------------------------------------
+package org.ThreadDemo;
+public class ThirdThread extends Thread
+{
+public void run()
+{
+	try
+	{
+	for(int i=1;i<=10;i++)
+	{
+		System.out.println("Thread3 "+i);
+	sleep(1000);
+	}
+	}
+	catch( Exception ae)
+	{
+		ae.printStackTrace();
+	}
+}
+}
+------------------------------------------------------
+package org.ThreadDemo;
+
+public class Mainclass 
+{
+	public static void main(String[] args) {
+	FirstThread f1=new FirstThread();
+SecondThread f2=new SecondThread();
+ThirdThread f3=new ThirdThread();
+f1.start();//start will call the run().at a time the run() will start executing.
+f2.start();
+f3.start();
+}
+}
+-----------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
