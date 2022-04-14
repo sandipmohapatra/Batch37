@@ -2269,6 +2269,8 @@ String s3=new String("apple");
 ----------------------------------------------------
 s1.equals(s3) is true because here there is string comparition.
 ----------------------------------------------------------------------------------
+string is immutable (cannot be changed)
+---------------------------------------------------------------
 example-2
 ----------------
 package org.stringdemo;
@@ -2326,7 +2328,31 @@ else
 }
 }
 -------------------------------------------------------------------------------------------------------------------
+String Buffer :- It is muttable (can be changed)
+--------------------------------------------------------------------------
+package org.stringdemo;
 
+public class StringDemo4 
+{
+public static void main(String[] args) 
+{
+	StringBuffer s1=new StringBuffer("My name ");
+	StringBuffer s2=new StringBuffer(" is sandip ");
+	StringBuffer s3=new StringBuffer("I am 40 years Old");
+	System.out.println(s1.append(s2));
+	System.out.println(s1.append(s3));
+	System.out.println(s1);
+	s1.setCharAt(0,'m');
+	System.out.println(s1);
+	System.out.println(s1.length());
+	System.out.println(s1.insert(36, "I am a trainer"));
+	System.out.println(s1.length());
+	System.out.println(s1.delete(34,38));
+	System.out.println(s1.reverse());
+	System.out.println(s1);
+}
+}
+---------------------------------------------------------------------------------------------------------------------
 
 
 
