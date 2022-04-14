@@ -2221,6 +2221,97 @@ public static void main(String[] args) {
 }
 }
 -------------------------------------------------------------------------------
+String :- It is derived datatype.
+It is also a class in java
+we have 3 similar classes.
+1)String:-It is Immutable.(Cannot be changed)
+2)StringBuffer:-mutable(can be changed)
+3)StringBuilder:-mutable (can be changed)
+------------------------------------------------------------------------------------------------------------------
+example-1
+------------------
+package org.stringdemo;
+
+public class StringDemo1 
+{
+public static void main(String[] args)
+{
+String s1="apple";
+String s2="apple";
+String s3=new String("apple");
+String s4=new String("apple");
+if(s1==s2)---------------------------------------1
+System.out.println("true");
+else
+System.out.println("false");
+if(s1==s3)---------------------------------------2
+System.out.println("true");
+else
+System.out.println("false");
+if(s3==s4)-----------------------------------------3
+System.out.println("true");
+else
+System.out.println("false");
+if(s1.equals(s4))------------------------------------4
+System.out.println("true");
+else
+System.out.println("false");
+}
+}
+----------------------------------------------------------------
+In the first case it displays true because it compares the hashcode.
+String doesnot create a new memory block when a same string is assigned to two different variables.
+So the memory location is same for both the strings.
+--------------------------------------------------
+But when we use new keyword then a new memory block is created.
+so (s1==s3) is false
+String s3=new String("apple");
+----------------------------------------------------
+s1.equals(s3) is true because here there is string comparition.
+----------------------------------------------------------------------------------
+example-2
+----------------
+package org.stringdemo;
+
+public class StringDemo2 {
+public static void main(String[] args) 
+{
+	String s1="Wipro Software Solution";
+	String s2="WiprO Software Solution";
+	System.out.println("the string is "+s1);
+	System.out.println("the upper case string is "+s1.toUpperCase());
+	System.out.println("the lower case string is "+s1.toLowerCase());
+	System.out.println("the indexOf string is "+s1.indexOf('W'));
+	System.out.println("the indexOf string is "+s1.indexOf('i'));
+	System.out.println("the indexOf string is "+s1.lastIndexOf('S'));
+	System.out.println("the equal string is "+s1.equals(s2));
+	System.out.println("the equal string is "+s1.equalsIgnoreCase(s2));
+	System.out.println("the substring string is "+s1.substring(1));
+	System.out.println("the substring string is "+s1.substring(0,5));
+	System.out.println("the charAt string is "+s1.charAt(0));
+	System.out.println("the charAt string is "+s1.charAt(1));
+	System.out.println("the startWith string is "+s1.startsWith("Wipro"));
+	System.out.println("the endsWith string is "+s1.endsWith("Solution"));
+	System.out.println("the Length of string is "+s1.length());
+	char x[]=s1.toCharArray();
+	int len=x.length;
+	for(int i=0;i<len;i++)
+	System.out.println(x[i]);
+	
+}
+}
+------------------------------------------------------------------------------- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
