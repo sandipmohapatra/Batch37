@@ -2353,11 +2353,45 @@ public static void main(String[] args)
 }
 }
 ---------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
+String Buffer is synchronized .
+String Builder is not synchronized.
+--------------------------------------------------------
+Files
+---------------
+1)It is used to store and manage data.
+2)We can read data from a file and write data into a file.
+3)We can do this operation using byte stream or character stream.
+4)stream is a flow of data .From source to destination. From a source file to a destination file.
+5)we will be using java.io.package.
+6)while working with files we have to handle exception.They are checked Exception.
+exceptions are:- 1)EOFException,FileNotFoundException,InterruptedIOException,IOException.
+----------------------------------------------------------------------------------------------------------------------------------
+example-1
+-------------------
+package org.files;
+import java.io.*;
+import java.util.*;
+public class Files1
+{
+public static void main(String[] args)
+{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter the file name");
+String fname=ob.next();
+File f=new File(fname);
+System.out.println("the file name is "+f.getName());
+System.out.println("the file path is "+f.getPath());
+System.out.println("the file path is "+f.getAbsolutePath());
+System.out.println("the file existing is "+f.exists());
+System.out.println("the file read  "+f.canRead());
+System.out.println("the file write "+f.canWrite());
+System.out.println("the file is file/directory  "+f.isFile());
+System.out.println("the file is file/directory  "+f.isDirectory());
+System.out.println("the file  length  "+f.length());
+}
+}
+--------------------------------------
+create the file on the project.
 
 
 
