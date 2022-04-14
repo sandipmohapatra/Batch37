@@ -2428,6 +2428,27 @@ public static void main(String[] args)throws Exception
 *student.txt will be automatically created.
 you have to refresh the project.
 ------------------------------------------------------------------
+example-3
+Reading the data from a file and storing into another file.
+-------------------------------------------------------------------------------
+package org.files;
+import java.io.*;
+public class Third 
+{
+public static void main(String[] args)throws Exception
+{
+	FileInputStream fis=new FileInputStream("student.txt");
+	FileOutputStream fos=new FileOutputStream("student1.txt");
+	int data;
+	while((data=fis.read())!=-1) //-1 indicates the end of the file.
+	{
+		fos.write(data);
+	}
+	fis.close();fos.close();
+	System.out.println("file writing over----------------");
+}
+}
+-------------------------------------------------------------------
 
 
 
