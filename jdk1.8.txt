@@ -2392,7 +2392,42 @@ System.out.println("the file  length  "+f.length());
 }
 --------------------------------------
 create the file on the project.
+--------------------------------------------------------
+We have 2 types of Stream 1)byte stream 2)char stream
+------------------------------------------------------------
+In byte stream we have :-
+InputStream to read the data from the file.
+OutputStream to write data from the file.
 
+we have some classes in byte stream
+1)BufferInputStream/BufferOutputStream
+2)FileInputStream/FileOutputStream
+3)ObjectInputStream/ObjectOutputStream -----serialization and de-serialization (means writing Object into the file and reading Object from the file).
+4)DataInputStream /DataOutputStream
+----------------------------------------------------------------
+Example-2
+-------------------
+package org.files;
+import java.io.*;
+public class SecondFile 
+{
+public static void main(String[] args)throws Exception
+{
+	DataInputStream dis=new DataInputStream(System.in);
+	FileOutputStream fos=new FileOutputStream("student.txt");
+	System.out.println("Enter the data");
+	int data;
+	while((data=dis.read())!='\n')
+	{
+		fos.write(data);
+	}
+	dis.close();fos.close();
+}
+}
+-----------------------------------
+*student.txt will be automatically created.
+you have to refresh the project.
+------------------------------------------------------------------
 
 
 
