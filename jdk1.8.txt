@@ -2528,7 +2528,24 @@ public static void main(String[] args) throws Exception
 	}
 }
 --------------------------------------------------------------------------------------------------------------
-
+Example-6
+----------------------
+package org.files;
+import java.io.*;
+public class eight 
+{
+public static void main(String[] args) throws Exception
+{
+	FileReader fr=new FileReader("student.txt");
+	BufferedReader br=new BufferedReader(fr);
+	String x;
+	while((x=br.readLine())!=null)
+	{
+		System.out.println(x);
+	}
+}
+}
+--------------------------------------------------------------------------------------------
 
 
 
