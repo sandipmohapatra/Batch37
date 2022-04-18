@@ -2360,7 +2360,7 @@ Files
 ---------------
 1)It is used to store and manage data.
 2)We can read data from a file and write data into a file.
-3)We can do this operation using byte stream (inputStream/outputStream)or character stream(reader/writer).
+3)We can do this operation using byte stream or character stream.
 4)stream is a flow of data .From source to destination. From a source file to a destination file.
 5)we will be using java.io.package.
 6)while working with files we have to handle exception.They are checked Exception.
@@ -2528,24 +2528,46 @@ public static void main(String[] args) throws Exception
 	}
 }
 --------------------------------------------------------------------------------------------------------------
-Example-6
-----------------------
-package org.files;
-import java.io.*;
-public class eight 
+Lambda Expression
+------------------------------------
+1)It is also known as functional interface.
+2)In this the interface will only contain one abstract method so it is called functional interface.
+3)In lambda expression we don't require 2 classes ie parent and child.we don't have to override.we don't have to implement the interface.
+4)We use the anotation @FunctionalInterface.
+5)It reduces the code .
+------------------------------------------------------------
+There are 3 components
+1)(),->,{body}
+()  ----Argument list or parameter list.
+()-> {System.out/.println("Hello");} //no argument
+(a)-> {System.out/.println("Hello");} //one argument
+(a,b)-> {System.out/.println("Hello");} //multiple argument
+----------------------------------------------------------------------------------------------
+example-1
+---------------------
+package org.lambdaDemo;
+@FunctionalInterface
+interface Lamb1 
 {
-public static void main(String[] args) throws Exception
+public void display(); //it can have only one abstract method
+}
+public class L1
 {
-	FileReader fr=new FileReader("student.txt");
-	BufferedReader br=new BufferedReader(fr);
-	String x;
-	while((x=br.readLine())!=null)
-	{
-		System.out.println(x);
+	public static void main(String[] args) {
+		int length=10;
+		int breadth=20;
+		Lamb1 obj=() ->
+		{
+			System.out.println("the length is "+length);
+			System.out.println("the breadth is "+breadth);
+			System.out.println("the area is "+(length*breadth));
+					};
+					obj.display();
 	}
 }
-}
---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
+
 
 
 
