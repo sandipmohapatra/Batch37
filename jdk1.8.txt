@@ -2360,7 +2360,7 @@ Files
 ---------------
 1)It is used to store and manage data.
 2)We can read data from a file and write data into a file.
-3)We can do this operation using byte stream or character stream.
+3)We can do this operation using byte stream (inputStream/outputStream)or character stream(reader/writer).
 4)stream is a flow of data .From source to destination. From a source file to a destination file.
 5)we will be using java.io.package.
 6)while working with files we have to handle exception.They are checked Exception.
