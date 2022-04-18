@@ -2474,6 +2474,62 @@ public static void main(String[] args)throws Exception
 	}
 }
 --------------------------------------------------------------------------
+Serialization and de-serialization
+---------------------------------------------------
+The process of reading and writing object into a file is known as Serialization and de-serialization.
+
+ObjectInputStream/ObjectOutputStream is used for Serialization and de-serialization
+
+Serialization is a marker interface.There will be no abstract method inside it.
+
+example-5
+----------------------------
+package org.files;
+import java.io.Serializable;
+public class five implements Serializable
+{
+int rollno;  //transient :- It is a keyword .This will not be serialized (transient int rollno;)
+String name,address;
+}
+------------------------------------
+package org.files;
+import java.io.*;
+public class Six 
+{
+public static void main(String[] args) throws Exception
+{
+	five ob=new five();
+	ob.rollno=101;
+	ob.name="sandip";
+	ob.address="Bangalore";
+	FileOutputStream fos=new FileOutputStream("Object.txt");
+	ObjectOutputStream os=new ObjectOutputStream(fos);
+	os.writeObject(ob);
+	fos.close();os.close();
+	System.out.println("Object written into the file");
+}
+}
+--------------------------------------------------------------
+package org.files;
+import java.io.*;
+public class seven
+{
+public static void main(String[] args) throws Exception
+{
+	five s1=null;
+	FileInputStream fos=new FileInputStream("Object.txt");
+	ObjectInputStream os=new ObjectInputStream(fos);
+	s1=(five)os.readObject();
+	fos.close();
+	os.close();
+	System.out.println("the rollno is "+s1.rollno);
+	System.out.println("the name is "+s1.name);
+	System.out.println("the address is "+s1.address);
+	}
+}
+--------------------------------------------------------------------------------------------------------------
+
+
 
 
 
