@@ -2449,7 +2449,31 @@ public static void main(String[] args)throws Exception
 }
 }
 -------------------------------------------------------------------
-
+example-4
+-----------------
+package org.files;
+import java.io.*;
+public class Forth 
+{
+public static void main(String[] args)throws Exception
+{
+	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+	System.out.println("Enter empno");
+	int empno=Integer.parseInt(br.readLine());
+	System.out.println("Enter empname");
+	String name=br.readLine();
+	System.out.println("Enter address");
+	String address=br.readLine();
+	System.out.println("Enter salary");
+	float salary=Float.parseFloat(br.readLine());
+	
+	System.out.println("The empno is :"+empno);
+	System.out.println("The empname is :"+name);
+	System.out.println("The address is :"+address);
+	System.out.println("The salary is :"+salary);
+	}
+}
+--------------------------------------------------------------------------
 
 
 
