@@ -2661,6 +2661,17 @@ public int div(int a ,int b)
 {
 	return a/b;
 }
+public static int findMax(int arr[])
+{
+	int max=arr[0];
+	for(int i=1;i<arr.length;i++)
+	{
+		if(max<arr[i])
+			max=arr[i];
+	}
+	return max;
+	
+}
 }
 --------------------------------------------------------------------
 package org.sandip;
@@ -2705,7 +2716,16 @@ public void stringTest()
 	String s1="Hello";
 	String s2="Hello";
 	assertSame(s1,s2);
-}}
+}
+@Test
+public void testFindMax()
+{
+	assertEquals(4,ob.findMax(new int[] {1,2,3,4}));
+	assertEquals(14,ob.findMax(new int[] {11,12,13,14}));
+	
+}
+
+}
 
 ------------------------------------------------------------------
 pom.xml
