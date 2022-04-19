@@ -2619,9 +2619,81 @@ example4 obj3=(a,b)->
 }
 }
 ---------------------------------------------------------------------------------------------
+Maven:- It is used to add dependencies to the application
+spring :- we have to add maven spring dependencies
+hibernate :- we have to add hibernate dependencies.
+Junit :- we will be adding JUNIT 4.12 dependencies.
+------------------------------------------------- 
+example-1
+--------------------
+package org.sandip;
 
+public class Calculator 
+{
+public int square(int i)
+{
+	return i*i;
+}
+public String user(String str)
+{
+	return "sandip";
+}
+public String concat(String str,String str1)
+{
+	return str+str1;
+}
+public int sum(int a ,int b)
+{
+	return a+b;
+}
 
+public int sub(int a ,int b)
+{
+	return a-b;
+}
 
+public int mul(int a ,int b)
+{
+	return a*b;
+}
+
+public int div(int a ,int b)
+{
+	return a/b;
+}
+}
+--------------------------------------------------------------------
+package org.sandip;
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class CalculatorTest
+{
+Calculator ob=new Calculator();
+@Test
+public void testSquare()
+{
+	assertEquals(25,ob.square(5));
+	assertEquals(36,ob.square(6));
+	}
+@Test
+public void testOption()
+{
+	assertEquals(25,ob.sum(10,15));
+	assertEquals(-5,ob.sub(10,15));
+	assertEquals(150,ob.mul(10,15));
+	assertEquals(5,ob.div(10,2));
+}}
+------------------------------------------------------------------
+pom.xml
+----------------
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.12</version>
+    <scope>test</scope>
+</dependency>
+--------------------------------------------------------------------
+mavenproject
 
 
 
