@@ -2682,7 +2682,31 @@ public void testOption()
 	assertEquals(-5,ob.sub(10,15));
 	assertEquals(150,ob.mul(10,15));
 	assertEquals(5,ob.div(10,2));
+}
+@Test
+public void testOption()
+{
+	assertEquals(25,ob.sum(10,15));
+	assertEquals(-5,ob.sub(10,15));
+	assertEquals(150,ob.mul(10,15));
+	assertEquals(5,ob.div(10,2));
+}
+@Test
+public void testUser()
+{
+	assertEquals("sandip",ob.user("sandip"));
+}
+
+@Test
+public void stringTest()
+{
+	String result=ob.concat("Hello ", "Students");
+	assertEquals("Hello Students",result);
+	String s1="Hello";
+	String s2="Hello";
+	assertSame(s1,s2);
 }}
+
 ------------------------------------------------------------------
 pom.xml
 ----------------
