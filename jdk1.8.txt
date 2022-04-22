@@ -2793,6 +2793,10 @@ Wrapper class :- All the datatypes in java are also classes
 --------------------------------------
 Package----->classes---->methods
 ------------------------------------------------------
+example-1
+----------------
+Method Overriding
+------------------------------------------
 //bank project :- 1)register 2)apply for credit card 3)dedit card 
 //AWT :- abstract windowing toolkit :- textfield=length=10px,breadth=20px,radio,checkbox
 //abstract class ,abstract methods are incompleted methods .we cannot create object of the abstract class.
@@ -2826,7 +2830,46 @@ class OverriddingDemo extends OverriddingDemo1
 			}
 }
 --------------------------------------------------------------------------------------------------
+example-2
+-----------------------
+interface a
+{
+	void display1();
+}
+interface b
+{
+	void display2();
+}
+interface c extends b
+{
+	void display3();
+}
 
+public class InterfaceDemo implements a,c 
+{
+
+	@Override
+	public void display2() {
+		System.out.println("This is display2");
+	}
+
+	@Override
+	public void display3() {
+		System.out.println("This is display3");
+		}
+
+	@Override
+	public void display1() {
+		System.out.println("This is display1");
+			}
+public static void main(String[] args) {
+	InterfaceDemo ob=new InterfaceDemo();
+	ob.display1();
+	ob.display2();
+	ob.display3();
+}
+}
+--------------------------------------------------------------
 
 
 
