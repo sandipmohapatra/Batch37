@@ -2780,6 +2780,52 @@ public class Test1
 	}
 }
 -----------------------------------------------------------------------------------------------------------------------
+Wrapper class :- All the datatypes in java are also classes 
+1)byte---Byte
+2)short ---Short
+3)int ---Integer
+4)long ---Long
+5)float ---Float
+6)double---Double
+7)boolean---Boolean
+8)char ---Chracter
+9)String
+--------------------------------------
+Package----->classes---->methods
+------------------------------------------------------
+//bank project :- 1)register 2)apply for credit card 3)dedit card 
+//AWT :- abstract windowing toolkit :- textfield=length=10px,breadth=20px,radio,checkbox
+//abstract class ,abstract methods are incompleted methods .we cannot create object of the abstract class.
+//we have to override the methods in the child class and create object of the child class.
+
+abstract class OverriddingDemo1
+{
+abstract void display();
+abstract int sum(int a,int b);
+}
+class OverriddingDemo extends OverriddingDemo1
+{
+
+	@Override
+	void display() 
+	{
+	System.out.println("This is a display method");
+			}
+
+	@Override
+	int sum(int a, int b) 
+	{
+			return a+b;
+	}
+	public static void main(String[] args)
+	{
+		OverriddingDemo ob1=new OverriddingDemo();
+		ob1.display();
+		System.out.println("the sum is"+ob1.sum(4,5));
+		System.out.println("the sum is"+ob1.sum(14,15));
+			}
+}
+--------------------------------------------------------------------------------------------------
 
 
 
