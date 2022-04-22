@@ -1,0 +1,29 @@
+HTML :- it is used for developing web pages.
+we have different tags .
+Html is user friendly.If we don't close the tag it will not display any error message.
+--------------
+second?t1=sandip&t2=7766554433&t3=sandip%40gmail.com&t4=2022-04-12&t5=Bangalore
+------------------
+Registration page
+Time table
+contact us
+service
+feedback
+-----------------------------------
+How to insert Map in form
+
+step1 :-https://www.google.com/maps/
+step2:-select the location
+step3:-share
+step4:-embed map
+step5:-copy the link
+-----------------------------------------------------
+How to insert google forms
+-----------------------------------------
+step1:-https://docs.google.com/forms/
+step2:- Blank
+step3:-Create the Form
+step4:-send
+step5:-<> embed the link
+step6:-response.
+
