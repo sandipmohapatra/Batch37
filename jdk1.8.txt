@@ -2870,9 +2870,70 @@ public static void main(String[] args) {
 }
 }
 --------------------------------------------------------------
+constructor ---------spring setter injection,constructor injection.
+setter,getter----------
+----------------------------------------------
+abstract ,interface --DAO interface
+----------------------------------------------------
+HashMap :- In this we enter key and value pair.The key should be duplicate .we can have dupilcate value.
 
+we want to convert HashMap to set 
 
+Set st=hm.entrySet();
+Map.Entry-----getKey(),getValue()
+-----------------------------------------------------------------
+searching of student details
+-----------------------------------------------
+example-1
+---------------------------
+package org.sandip;
 
+public class Student {
+int rollno;
+String name,address;
+public Student(int rollno, String name, String address) {
+	this.rollno = rollno;
+	this.name = name;
+	this.address = address;
+}
+@Override
+public String toString() {
+	return "Student [rollno=" + rollno + ", name=" + name + ", address=" + address + "]";
+}
+
+}
+------------------------------------------------------------------------------------------------------------
+package org.sandip;
+import java.util.*;
+public class SearchStud 
+{
+public static void main(String[] args) {
+	HashMap<Integer, Student> hm=new HashMap<Integer, Student>();
+	Student st1=new Student(101,"sandip","Bangalore");
+	Student st2=new Student(102,"anil","Bangalore");
+	Student st3=new Student(103,"sunil","Bangalore");
+	Student st4=new Student(104,"Kiran","Bangalore");
+	hm.put(1,st1);
+	hm.put(2,st2);
+	hm.put(3,st3);
+	hm.put(4,st4);
+	Scanner ob=new Scanner(System.in);
+	System.out.println("Enter the key you want to search");
+	Integer k=ob.nextInt();
+	Set st=hm.entrySet();   //convert the HashMap to Set
+	Iterator it=st.iterator();
+	while(it.hasNext())
+	{
+		Map.Entry en=(Map.Entry)it.next(); //Map.Entry is a interface contain abstract method getKey() ,getValue()
+		if(en.getKey()==k)
+			System.out.println(en.getKey() +"    "+en.getValue());
+	}
+}
+}
+---------------------------------------------------------------------------------------
+wap to enter Libary details (bookid,bookname,auther,price,yearofpublication)
+enter the bookid and display the details.
+--------------------------------------------------------------------------------------------------
 
 
 
