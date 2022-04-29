@@ -1,0 +1,16 @@
+Create a COID-19 hospital
+1)registration page
+2)view doctors timing
+3)Book your time
+4)Book a bed
+5)Book an ambulance
+6)Feedback page
+----------------------------------------------------------
+1)The world wide web project
+2)pentogram font catalog
+3)pentogram-font-catalog-preview challenge
+4)samanderson-portfolio challenge
+5)masonry-layout-challenge
+6)column-drop-pattern-challenge
+7)digix-engineers-challenge
+---------------------------------------------------------- 
