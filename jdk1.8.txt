@@ -2934,6 +2934,36 @@ public static void main(String[] args) {
 wap to enter Libary details (bookid,bookname,auther,price,yearofpublication)
 enter the bookid and display the details.
 --------------------------------------------------------------------------------------------------
+File Handling
+-----------------------------
+vindhu has completed his assignments.-----
+Vindhu Has Completed His Assignments.
+------------------------------------------------------------------------------
+package org.fileDemo;
+import java.io.*;
+public class Capitalize
+{
+	public static void main(String[] args) throws IOException {
+        BufferedReader br1 = new BufferedReader(new FileReader("student.txt"));
+        String rline;
+        String output = "";
+
+        while ((rline = br1.readLine()) != null) 
+        {
+            String[] lineArr = rline.split(" ");
+
+            for (String word : lineArr) 
+            {
+                word = Character.toUpperCase(word.charAt(0)) + word.substring(1);
+                output += word + " ";
+            }
+            output += "\n";
+        }
+        System.out.print(output);
+        br1.close();
+    }
+}
+-------------------------------------------------------------------------------------------------
 
 
 
