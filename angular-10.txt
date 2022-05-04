@@ -1,0 +1,24 @@
+Angular10
+------------------------
+1)Angular is an open source,crosss platform.
+2)It provides end to end solution for building,debugging,testing and deploying.
+3)It provides testing framework like jasmine,karma,protractor.
+4)Language used in angular is type script.It support oops concept.
+5)In javascript we have var as the datatype where as in typescript we use let as datatype.
+6)The type is developed by facebook.
+7)After compilation of typescript the javascript file is created which is supported by the browser.
+8)Angular framework support MVC (model,veiw and controller)
+9)It is used to create SPA(single page application)
+10)It has high speed and performance is better as compared to older technology.
+11)Angular use AOT compiler.(Ahead-of-time).
+------------------------------------------------------------------------------------------------------------------------------------
+installation
+----------------------
+step 1:install node.
+step 2:-npm install -g @angular/cli
+step 3:-desktop> ng new wipro37
+step 4:-cd wipro37
+step 5:- desktop/wipro37>
+step 6:- start the node server
+step 7:- desktop/wipro37>ng serve
+----------------------------------------------------------------------------------------------------------------------------
