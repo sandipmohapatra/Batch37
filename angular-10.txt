@@ -14,7 +14,9 @@ Angular10
 ------------------------------------------------------------------------------------------------------------------------------------
 installation
 ----------------------
-step 1:install node.
+step 1:install node.:-https://nodejs.org/en/download/  --->Windows Installer (.msi) --->64bit--->download and install
+command prompt :- node -v
+
 step 2:-npm install -g @angular/cli
 step 3:-desktop> ng new wipro37
 step 4:-cd wipro37
