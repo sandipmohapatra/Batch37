@@ -21,6 +21,8 @@ step 2:-npm install -g @angular/cli
 step 3:-desktop> ng new wipro37
 step 4:-cd wipro37
 step 5:- desktop/wipro37>
-step 6:- start the node server
+step 6:-to start the node server
 step 7:- desktop/wipro37>ng serve
+step 8:-open browser ---->localhost:4200
+step 9:- install visual studio code
 ----------------------------------------------------------------------------------------------------------------------------
