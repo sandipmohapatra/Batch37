@@ -81,6 +81,46 @@ app.module.ts
 -------------------------------------
  bootstrap: [LoginComponent]
 ---------------------------------------------------------------------------
+Registration
+login
+contact
+feedback
+service
+
+while creating the modules you should be inside the src/app>ng g c registeration --skipTests
+--------------------------------------------------------------------------------------------------------------------------------
+to run make change in
+index.html
+module.ts
+--------------------------------------------------------------
+Example-1
+---------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  })
+export class RegisterComponent 
+{
+public product=
+{
+  name:'Samgung TV',
+  price:45000.50
+}
+  }
+-----------------------------------------------------------------
+<dl>
+<dt>Name :</dt>
+<dd>{{product.name}}</dd>
+<dt>Price :</dt>
+<dd>{{product.price}}</dd>
+</dl>
+-------------------------------------------------------------------------
+*Change
+index.html
+module.ts
+----------------------------------------
 
 
 
