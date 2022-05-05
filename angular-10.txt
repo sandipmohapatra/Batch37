@@ -23,6 +23,77 @@ step 4:-cd wipro37
 step 5:- desktop/wipro37>
 step 6:-to start the node server
 step 7:- desktop/wipro37>ng serve
+---------------------------------------------------------------------
 step 8:-open browser ---->localhost:4200
 step 9:- install visual studio code
 ----------------------------------------------------------------------------------------------------------------------------
+When you create a project we have make changes in these files 
+1)app.component.ts
+2)app.component.html
+3)app.component.css
+4)app.module.ts----all the files details used in the project.
+5)index.html---change the selector name
+------------------------------------------------------------------------------------------------------------
+step-1:-how to create project
+ng g c login --skipTests
+-------------------------------------------
+step-2
+login.component.html
+------------------
+
+<h1>Employee Registration Page</h1><hr>
+<form>
+<table>
+<tr><td>Enter your name</td><td><input type=text name=t1 size=20></td></tr>
+<tr><td>Enter your email</td><td><input type=text name=t2 size=20></td></tr>
+<tr><td>Enter your address</td><td><input type=text name=t3 size=20></td></tr>
+<tr><td>Enter your phoneno</td><td><input type=text name=t4 size=20></td></tr>
+<tr><td>Enter your nationality</td><td><input type=text name=t5 size=20></td></tr>
+<tr><td></td><td><input type=submit value="submit"></td></tr>
+</table>
+</form>
+---------------------------------------------------------------
+login.component.ts
+------------------------------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
+-----------------------------------------------------------------------
+index.html
+---------------------
+<body>
+  <app-login></app-login>
+</body>
+-----------------------------------------------------------
+app.module.ts
+-------------------------------------
+ bootstrap: [LoginComponent]
+---------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
