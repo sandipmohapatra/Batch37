@@ -121,8 +121,18 @@ public product=
 index.html
 module.ts
 ----------------------------------------
+In angular there are 2 ways of data binding
+----------------------------------------------------------
+1)One way data binding
+i)interpolation 
+we use double curly braces{{}} and is known as interpolation or tmplate expresssion.
+{{name}}
+we can assign some values in the "app.component.ts" and display the value in the html page
+example:-
+<p> The sum of 6 and 7 is {{6+7}}</p>
+<p> The multiply of 6 and 7 is {{6*7}}</p>
 
-
+-------------------------------------------------------------------------
 
 
 
