@@ -258,20 +258,20 @@ BootStrap with angular
 ---------------------------------------------
 Example-5
 -----------------------
-app.component.ts
+feed-back.component.ts
 ------------------------------
 
-import {Component} from '@angular/core';
-@Component ({
-    selector :'my-app',
-    templateUrl:`app/app.component.html`
-})
-export class AppComponent
-{
-}
+import { Component } from '@angular/core';
 
+@Component({
+  selector: 'app-feed-back',
+  templateUrl: './feed-back.component.html',
+  styleUrls: ['./feed-back.component.css']
+})
+export class FeedBackComponent {
+}
 -----------------------------------------------------
-app.component.html
+feed-back.component.html
 --------------------------------------------
 
 <!DOCTYPE html>
@@ -345,9 +345,9 @@ Example-6
       <a routerLink="/addcustomer"class="w3-bar-item w3-button">CustomerRegistration</a>
     </div>
     </div>
-  <a [routerLink]="['/Product']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Product</a>
+  <a [routerLink]="['/Contact']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
   <a [routerLink]="['/Login']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Login</a>
-  <a [routerLink]="['/Inventory']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Inventory</a>  
+  <a [routerLink]="['/Service']" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Service</a>  
   
 </div>
 <router-outlet></router-outlet>
@@ -355,7 +355,47 @@ Example-6
     </body>
     </header>
 -----------------------------------------------------------------------------------------------------------------------------
+example-7
+-----------------
+import { Component } from '@angular/core';
 
+@Component({
+  selector: 'app-example1',
+  template: `
+<p>Hello my name is {{name}} </p>
+<p>Hello my email is {{email}} </p>
+<p>Hello my address is {{address.street}} {{address.loc}} {{address.state}} {{address.city}} </p>
+<h3>My Hobbies are </h3>{{hobbies}}
+<h3>My Daily Foods are </h3>
+<ul>
+<li *ngFor="let food of foods">
+{{food}}
+</ul>
+ `
+
+  })
+export class Example1Component  {
+name:String;
+email:String;
+address:any;
+hobbies:string[];
+foods:string[];
+constructor()
+{
+  this.name='sandip';
+  this.email='sandip@gmail.com';
+  this.address=
+  {
+    street:'MG Road',
+    loc:'Sivaji Nagar',
+    state:'Karnataka',
+    city:'Bangalore'
+  }
+  this.hobbies=['music','movies','party','football'];
+  this.foods=['rice','Biryani','sweets','cakes'];
+}
+}
+---------------------------------------------------------------------------------------------
 
 
 
