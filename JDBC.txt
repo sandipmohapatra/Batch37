@@ -14,3 +14,21 @@ update the data
 update wiproemp37 set address='Bangalore' where empno=102;
 select * from wiproemp37;
 ------------------------------------------------------------------------------------------------------------
+delete the data
+delete from wipro37 where empno=101;
+-------------------------------------------------------------------------
+To add a column
+alter table wiproemp37 add email varchar2(50); 
+-------------------------------------------------------------------------
+to insert data into that column 
+update wiproemp37 set email='Koyel@gmail.com' where empno=102;
+---------------------------------------------------------------------------------------------------------
+to delete a column
+alter table wiproemp37 drop column email;
+-------------------------------------------------------------------
+
+
+
+
+
+
