@@ -28,6 +28,7 @@ Method Reference
 Streams-Stringformat
 Streams-numbers	Streams-Array-Integers	
 Streams-evennumbersfinder	
+--------------------------------------------------------------------------------------------------
 Exercise-Getting Started with JavaScript	
 Exercise-Dom and DOM events	
 Exercise-Application Servers using HTTP Protocol	
