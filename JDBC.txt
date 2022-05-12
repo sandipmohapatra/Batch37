@@ -1,0 +1,16 @@
+Oracle-10xe
+--------------------------
+create table
+create table wiproemp37(empno number,name varchar2(30),address varchar2(30),phoneno number);
+-------------------------------------------------------------------------------
+insert data
+insert into wiproemp37 values(101,'Srividya','Hydrabad',7766554433);
+insert into wiproemp37 values(102,'Koyel','Hydrabad',9966554433);
+--------------------------------------------------------------------------------------------
+display the data
+select * from wiproemp37;
+-----------------------------------------------------------------------------------------------
+update the data
+update wiproemp37 set address='Bangalore' where empno=102;
+select * from wiproemp37;
+------------------------------------------------------------------------------------------------------------
