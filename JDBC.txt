@@ -130,7 +130,44 @@ println(rs.getString(1)+"  "+rs.getString(20));
 --------------------------------------------------------------
 The pointer will move to the next row till it reaches the end of the table.
 -------------------------------------------------------------------------------------------------------------
-
+Example-5
+------------------
+package org.Jdbc;
+import java.sql.*;
+public class FirstJdbc5 
+{
+public static void main(String[] args) throws Exception
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+	Statement st=con.createStatement();
+	ResultSet rs=st.executeQuery("select * from wiprobatch37");
+	while(rs.next())
+	{
+	System.out.println(rs.getString(1)+"  "+rs.getString(2)+" "+rs.getString(3));
+	}
+}
+}
+---------------------------------------------------------------
+example-6
+-----------------
+package org.Jdbc;
+import java.sql.*;
+public class FirstJdbc5 
+{
+public static void main(String[] args) throws Exception
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+	Statement st=con.createStatement();
+	ResultSet rs=st.executeQuery("select * from wiprobatch37 where empno=101");
+	while(rs.next())
+	{
+	System.out.println(rs.getString(1)+"  "+rs.getString(2)+" "+rs.getString(3));
+	}
+}
+}
+-------------------------------------------------------------------------------------------------------------------------
 
 
 
