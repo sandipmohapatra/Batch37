@@ -26,6 +26,8 @@ update wiproemp37 set email='Koyel@gmail.com' where empno=102;
 to delete a column
 alter table wiproemp37 drop column email;
 -------------------------------------------------------------------
+Java Database Connectivity
+-------------------------------------------
 
 
 
