@@ -84,6 +84,55 @@ public static void main(String[] args) throws Exception
 }
 }
 -------------------------------------------------------------------------
+example-3
+-----------------
+package org.Jdbc;
+import java.sql.*;
+public class FirstJdbc3 
+{
+public static void main(String[] args) throws Exception
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+	Statement st=con.createStatement();
+	st.execute("update wiprobatch37 set address='Hydrabad' where empno=101");
+	System.out.println("row updated");
+}
+}
+-----------------------------------------------------------------
+example-4
+---------------------
+package org.Jdbc;
+import java.sql.*;
+public class FirstJdbc4 
+{
+public static void main(String[] args) throws Exception
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+	Statement st=con.createStatement();
+	st.execute("delete from wiprobatch37 where address='Bangalore' ");
+	System.out.println("row deleted");
+}
+}
+---------------------------------------------------------------------------------------------
+To select we have use ResultSet and executeQuery();
+--------------------------------------------------------------------------------
+ResultSet rs=st.executeQuery("select * from wiprobatch37");
+so total table will be stored in the rs.
+we have to use while loop to iterate the data.
+while(rs.next())
+{
+println(rs.getString(1)+"  "+rs.getString(20));
+}
+-------------------------------------------------------------
+1 and 2 are the first and second columns.
+--------------------------------------------------------------
+The pointer will move to the next row till it reaches the end of the table.
+-------------------------------------------------------------------------------------------------------------
+
+
+
 
 
 
