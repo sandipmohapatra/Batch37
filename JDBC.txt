@@ -26,8 +26,37 @@ update wiproemp37 set email='Koyel@gmail.com' where empno=102;
 to delete a column
 alter table wiproemp37 drop column email;
 -------------------------------------------------------------------
+Link to Download oracle
+-------------------------------------
+https://drive.google.com/file/d/0B_8PmSMM3tRdMl9PS1hUMFFEbkk/view?usp=sharing&resourcekey=0-qjqe8sjixyAi8meOXxO_jQ
+-----------------------------------------------------------------
 Java Database Connectivity
 -------------------------------------------
+Java-----Driver------Oracle
+----------------------------------------------
+we will be using type 4 driver
+-------------------------------------------------
+to load the driver
+----------------------------
+Class.forName("oracle.jdbc.driver.OracleDriver");
+-----------------------------------------------------------------------
+to create the connection
+-----------------------------------
+Connection con=DriverManager.getConnetion("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+--------------------------------------------------------------------------------------------------------------------------------------
+path of jar file.
+------------------------
+C:\oraclexe\app\oracle\product\10.2.0\server\jdbc\lib
+------------------------------------------------------------------------
+how to add the jar file.
+-----------------------------------
+right-click on project--------->properties----->Java Build path------------>classpath------>add external jars.---->browse the file--->apply and close
+-------------------------------------------
+
+
+
+
+
 
 
 
