@@ -52,7 +52,38 @@ how to add the jar file.
 -----------------------------------
 right-click on project--------->properties----->Java Build path------------>classpath------>add external jars.---->browse the file--->apply and close
 -------------------------------------------
-
+Example-1
+------------------
+package org.Jdbc;
+import java.sql.*;
+public class FirstJdbc 
+{
+public static void main(String[] args) throws Exception
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+	Statement st=con.createStatement();
+	st.execute("create table wiprobatch37(empno number,name varchar2(30),address varchar2(30))");
+	System.out.println("Table created");
+}
+}
+----------------------------------------------------------------------------
+example-2
+------------------
+package org.Jdbc;
+import java.sql.*;
+public class FirstJdbc2 
+{
+public static void main(String[] args) throws Exception
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+	Statement st=con.createStatement();
+	st.execute("insert into wiprobatch37 values(101,'sandip','Bangalore')");
+	System.out.println("row inserted");
+}
+}
+-------------------------------------------------------------------------
 
 
 
