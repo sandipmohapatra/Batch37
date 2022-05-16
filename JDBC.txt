@@ -273,7 +273,13 @@ System.out.println(rs.getString(1)+"  "+rs.getString(2)+"  "+rs.getString(3));
 1 ,2 and 3 are the column numbers.
 ---------------------------------------------------------------
 	
-
+wap to display the bank details of a person.
+a person has accno,name,balance.
+Using case and switch 
+1.withdraw , 2.deposite and 3.display
+Do the transaction
+and display the final balnace 
+------------------------------------------------------
 
 
 
