@@ -193,7 +193,31 @@ public static void main(String[] args) throws Exception
 }
 }
 ---------------------------------------------------------------------------------------------------------
-
+example-8
+------------------------------------
+package org.Jdbc;
+import java.sql.*;
+import java.util.*;
+public class FirstJdbc7 
+{
+public static void main(String[] args) throws Exception
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+	Scanner ob=new Scanner(System.in);
+	System.out.println("Enter name,address and empno to update");
+	PreparedStatement st=con.prepareStatement("update wiprobatch37 set name=?, address=? where empno=?");
+			String name=ob.next();
+			String address=ob.next();
+			int empno=ob.nextInt();
+			st.setString(1, name);
+			st.setString(2, address);
+			st.setInt(3,empno);
+	st.execute();
+	System.out.println("row updated");
+}
+}
+-------------------------------------------------------------------------------
 
 
 
