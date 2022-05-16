@@ -218,7 +218,27 @@ public static void main(String[] args) throws Exception
 }
 }
 -------------------------------------------------------------------------------
-
+example-9
+--------------------
+package org.Jdbc;
+import java.sql.*;
+import java.util.*;
+public class FirstJdbc8 
+{
+public static void main(String[] args) throws Exception
+{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","1234");
+	Scanner ob=new Scanner(System.in);
+	System.out.println("Enter empno to delete");
+	PreparedStatement st=con.prepareStatement("delete from wiprobatch37 where empno=?");
+			int empno=ob.nextInt();
+			st.setInt(1,empno);
+	st.execute();
+	System.out.println("row deleted");
+}
+}
+-----------------------------------------------------------------------------------------------------------
 
 
 
