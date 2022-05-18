@@ -358,7 +358,82 @@ st.execute();
 out.println("row inserted");
 %>
 --------------------------------------------------------------------------------------------------------------
+Example-3
+-----------------------
+<html>
+<body bgcolor=yellow>
+<h1><center>Employee Registration Page</center></h1><hr>
+<form action="second.jsp">
+<table>
+<tr><td>Enter empno<td><input type=text name=t1 size=20></tr>
+<tr><td>Enter name<td><input type=text name=t2 size=20></tr>
+<tr><td>Enter address<td><input type=text name=t3 size=20></tr>
+<tr><td><td><input type=submit value=insert name=b1>
+<input type=submit value=update name=b1>
+<input type=submit value=delete name=b1>
+<input type=submit value=select name=b1></tr>
 
+</table>
+</form>
+</body>
+</html>
+-----------------------------------------------------------------------
+<%@page import="java.sql.*"%>
+<%
+String a = request.getParameter("t1");
+String b = request.getParameter("t2");
+String c = request.getParameter("t3");
+String but=request.getParameter("b1");
+%>
+<%
+Class.forName("oracle.jdbc.driver.OracleDriver");
+Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "1234");
+if(but.equals("insert"))
+{
+PreparedStatement st = con.prepareStatement("insert into wiprobatch37 values(?,?,?)");
+st.setInt(1,Integer.parseInt(a));
+st.setString(2, b);
+st.setString(3, c);
+st.execute();
+out.println("row inserted");
+}
+
+else if(but.equals("update"))
+{
+PreparedStatement st = con.prepareStatement("update wiprobatch37 set name=?,address=? where empno=?");
+st.setString(1,b);
+st.setString(2,c);
+st.setInt(3,Integer.parseInt(a));
+st.execute();
+out.println("row updated");
+}
+
+else if(but.equals("delete"))
+{
+PreparedStatement st = con.prepareStatement("delete from wiprobatch37 where empno=?");
+st.setInt(1,Integer.parseInt(a));
+st.execute();
+out.println("row deleted");
+}
+
+else if(but.equals("select"))
+{
+PreparedStatement st = con.prepareStatement("select * from wiprobatch37");
+ResultSet rs=st.executeQuery();
+out.println("<table border=1>");
+out.println("<tr><th>Empno<th>Name<th>Address</tr>");
+while(rs.next())
+{
+out.println("<tr><td>"+rs.getString(1)+"<td>"+rs.getString(2)+" <td> "+rs.getString(3)+"</tr>");
+}
+out.println("</table>");
+}
+else
+{
+out.println("Wrong Input");
+}
+%>
+--------------------------------------------------------------------------------
 
 
 
