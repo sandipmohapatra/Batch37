@@ -1,10 +1,10 @@
 1)Vishnu,srivani,bupesh,Arpit
-2)Blessy,hanisha,Madhusudhan,Dinesh
-3)Ayush,Dhruva,satwat,akhila
-4)Srividya,lakshit,Anusha,Devanshu Vishwakarma
-5)JITENDRAVENKATA SAI,sai kumar,pawan kalyan,Vibhav gupta
+2)Blessy,hanisha,Madhusudhan,Dinesh----COVID -19 app
+3)Ayush,Dhruva,satwat,akhila---walmart app
+4)Srividya,lakshit,Anusha,Devanshu Vishwakarma----Muzix 
+5)JITENDRAVENKATA SAI,sai kumar,pawan kalyan,Vibhav gupta---Book app
 6)Viswanadha Sai,Akanksha,Akash,Koyal
-
+7)tejas sunil rao,
 -------------------------------------------------------------------------------------------------
 Angular,Springboot,Microservices,Oracle.
 --------------------------------------------------------------------------------------------------
