@@ -1,6 +1,10 @@
-1)Vishnu,srivani,bupesh,Arpit,Akanksha
-2)Blessy,hanisha,Madhusudhan,Koyal
+1)Vishnu,srivani,bupesh,Arpit
+2)Blessy,hanisha,Madhusudhan,Dinesh
 3)Ayush,Dhruva,satwat,akhila
 4)Srividya,lakshit,Anusha,Devanshu Vishwakarma
 5)JITENDRAVENKATA SAI,sai kumar,pawan kalyan,Vibhav gupta
-6)
+6)Viswanadha Sai,Akanksha,Akash,Koyal
+
+-------------------------------------------------------------------------------------------------
+Angular,Springboot,Microservices,Oracle.
+--------------------------------------------------------------------------------------------------
