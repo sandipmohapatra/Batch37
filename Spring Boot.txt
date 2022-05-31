@@ -76,7 +76,7 @@ The spring-boot-starter-parent is a project starter. It provides default configu
 <parent>  
 <groupId>org.springframework.boot</groupId>  
 <artifactId>spring-boot-starter-parent</artifactId>  
-<version>1.4.0.RELEASE</version>  
+<version>2.4.0.RELEASE</version>  
 </parent>  
 Parent Poms allow us to manage the following things for multiple child projects and modules:
 
